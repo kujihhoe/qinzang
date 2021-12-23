@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://qin.kqh.me/sitemap.xml
