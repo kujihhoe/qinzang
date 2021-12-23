@@ -1,0 +1,423 @@
+<!-- 是否是直排 -->
+{{ $isVertical := 0 }}
+{{ if or .Params.vertical (and site.Params.vertical (ne .Params.vertical false)) }}
+{{ $isVertical = 1 }}
+{{ end }}
+<!-- 取得這些索引的名字 -->
+{{- $nameTuto := slice -}}
+{{- with .Params.tutoseries -}}
+{{- range . -}}
+{{- $nameTuto = . -}}
+{{- with site.GetPage "term" (printf "tutoseries/%s" $nameTuto) | default (site.GetPage "term" (printf
+"tutoseries/%s" ($nameTuto | urlize))) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- $nameExam := slice -}}
+{{- with .Params.examsort -}}
+{{- range . -}}
+{{- $nameExam = . -}}
+{{- with site.GetPage "term" (printf "examsort/%s" $nameExam) | default (site.GetPage "term" (printf
+"examsort/%s" ($nameExam | urlize))) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- $nameToc := slice -}}
+{{- with .Params.toc -}}
+{{- range . -}}
+{{- $nameToc = . -}}
+{{- with site.GetPage "term" (printf "toc/%s" $nameToc) | default (site.GetPage "term" (printf
+"toc/%s" ($nameToc | urlize))) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- $nameBook := slice -}}
+{{- with .Params.book -}}
+{{- range . -}}
+{{- $nameBook = . -}}
+{{- with site.GetPage "term" (printf "book/%s" $nameBook) | default (site.GetPage "term" (printf
+"book/%s" ($nameBook | urlize))) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{ if eq $nameTuto "律曆初階" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.tutoseries.律曆初階 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameTuto "資源" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.tutoseries.資源 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq .Type "column1" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with (where site.RegularPages "Type" "column1") }}
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameExam "課堂筆記" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.examsort.課堂筆記 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameExam "考試複習" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.examsort.考試複習 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameToc "冊00" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.toc.冊00 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameToc "冊01" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.toc.冊01 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameToc "冊02" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.toc.冊02 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameToc "冊03" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.toc.冊03 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "踐行社會主義核心價値觀" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.踐行社會主義核心價値觀 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "小學" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.小學 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "三禮" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.三禮 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "三傳" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.三傳 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "尙書" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.尙書 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "孝經論語" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.孝經論語 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "經部專書" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.經部專書 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "先秦" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.先秦 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "漢人" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.漢人 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "淸人" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.淸人 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "史" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.史 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "史部專書" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.史部專書 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "厤" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.厤 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "琴樂書" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.琴樂書 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "西學" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.西學 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+
+{{ else if eq $nameBook "其他" }}
+<aside class="toc 
+{{ if eq $isVertical 0 }}toc-verticlal-false toc-left-vertical-false
+{{ else }}
+toc-left
+{{ end }}">
+  {{ with site.Taxonomies.book.其他 }}
+  <ul>
+    {{ range sort .Pages "File.Path" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</aside>
+{{ else }}
+<aside></aside>
+{{ end }}

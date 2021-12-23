@@ -1,0 +1,95 @@
+<div>
+  <span class="des-base des-des">
+    <time>{{ .Date.Format "2006-01-02" }}</time>
+    {{ if ne .Date .Lastmod }} >{{- .Lastmod.Format "06-01-02" }}{{ end }}
+  </span>　
+  <div class="discover-item"><a href="{{ .Permalink }}" class="archive-post-link" target="_blank">{{- .Title | safeHTML
+      | markdownify -}}</a></div>
+  <span class="des-base">{{ .Params.description | safeHTML | markdownify }}</span>
+  <div class="des-base des-des des-tag a1">
+    {{- with .Params.author -}}
+    {{ range . }}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "author/%s" $name) | default (site.GetPage "term" (printf "author/%s"
+    ($name
+    | urlize))) -}}
+    <a href="/author/{{ $name }}">@{{- $name -}}</a>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.auth -}}
+    {{- range . -}}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "auth/%s" $name) | default (site.GetPage "term" (printf "auth/%s"
+    ($name | urlize))) -}}
+    <a href="/auth/{{ $name }}">@{{- $name -}}</a>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.category -}}
+    {{- range . -}}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "category/%s" $name) | default (site.GetPage "term" (printf "category/%s"
+    ($name | urlize))) -}}
+    　<a href="/category/{{ $name }}" target="_blank">[{{- $name -}}]</a>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.series -}}
+    {{- range . -}}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "series/%s" $name) | default (site.GetPage "term" (printf "series/%s"
+    ($name
+    | urlize))) -}}
+    　<a href="/series/{{ $name }}" target="_blank">{{- $name -}}｜</a>
+    {{ end -}}
+    {{ end }}
+    {{- end }}
+    {{ with .Params.tag -}}
+    {{ range . }}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "tag/%s" $name) | default (site.GetPage "term" (printf "tag/%s" ($name |
+    urlize))) -}}
+    <a href="/tag/{{ $name }}" target="_blank">#{{- $name -}}</a>
+    {{ end -}}
+    {{ end }}
+    {{- end }}
+    {{ with .Params.note -}}
+    {{ range . }}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "note/%s" $name) | default (site.GetPage "term" (printf "note/%s" ($name |
+    urlize))) -}}
+    <a href="/note/{{ $name }}" target="_blank">({{- $name -}})</a>
+    {{ end -}}
+    {{ end }}
+    {{- end }}
+    {{- with .Params.book -}}
+    {{ range . }}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "book/%s" $name) | default (site.GetPage "term" (printf
+    "book/%s"
+    ($name | urlize))) -}}
+    <a href="/read#{{ $name }}">《{{- $name -}}》</a>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.subject -}}
+    {{- range . -}}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "subject/%s" $name) | default (site.GetPage "term" (printf "subject/%s"
+    ($name | urlize))) -}}
+    <a href="/subject/{{ $name }}" target="_blank">#{{- $name -}}</a>
+    {{ end -}}
+    {{ end }}
+    {{- end }}
+    {{- with .Params.from -}}
+    {{- range . -}}
+    {{- $name := . -}}
+    {{- with site.GetPage "term" (printf "from/%s" $name) | default (site.GetPage "term" (printf "from/%s" ($name |
+    urlize))) -}}
+    <a href="/from/{{ $name }}" target="_blank">«{{- $name -}}</a>
+    {{ end -}}
+    {{ end }}
+    {{- end }}
+  </div>
+</div>

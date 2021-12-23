@@ -1,0 +1,16 @@
+<div class="discover-wrap">
+  <div class="discover column3 a1 a3" style="gap: 3em;">
+    {{ range .Data.Terms.ByCount }}
+    {{ if ne .Page.Title "目錄" "編務" }}
+    {{ $taxo := index site.Data.taxo .Page.Title }}
+    <a href="/category/{{ .Page.Title }}">
+      <div class="recommendation-card" style='background-image: url("{{ $taxo.img }}")'>
+        <div style="font-size: 1.5em;font-weight: bold;">{{ .Page.Title }}<sup class="tag-count"> {{ .Count }}</sup>
+          <p class="des-base black" style="font-weight: normal;font-size: .6em;">{{ $taxo.des | safeHTML }}</p>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{{ $taxo := index site.Data.taxo .Page.Title -}}
+{{ $img := $taxo.img }}
+{{ $des := $taxo.des }}
+<div class="article-cover a1" style='background-image: url("{{ $img }}");margin-top: -2em;margin-bottom: 6em;'>
+  <div>
+    <h1 style="margin:0;">
+      <n style="font-family: var(--sans);font-weight: normal;font-size: .5em;">
+        {{- if eq .Page.Type "category" }}<a href="/category/">[分類]</a>
+        {{ else if eq .Page.Type "series" }}<a href="/series/">系列｜</a>
+        {{ else if eq .Page.Type "tag" }}<a href="/tag/">#標籤</a>
+        {{ else if eq .Page.Type "toc" }}<a href="/toc/">[琴藏目錄]</a>
+        {{ else if eq .Page.Type "note" }}<a href="/note/">(備註)</a>
+
+        {{ end -}}
+      </n> {{ .Page.Title }}
+    </h1>
+    <p class="des-taxo black" style="font-size: 1.2em;font-weight: normal;">{{ $des }}</p>
+    <p class="des-base black" style="font-size: .9em;font-weight: normal;">
+      {{- $length := len .Data.Pages }}
+      {{ $count := 0 }}{{ range .Pages }}{{ $count = add $count .WordCount }}{{ end }}
+      凡 {{ $length }} 篇　{{- $count }} 字　篇均 {{ div $count $length }} 字　{{- with .Data.Pages.GroupByDate "2006" -}}橫跨
+      {{ len . }} 年{{ end }}
+      <span class="des-base">
+        <a class="rss3" href="{{- .Permalink -}}index.xml" target="_blank">
+          <span class="rss1">{{- .Page.Title -}}</span><span class="rss2">RSS</span>
+        </a>
+      </span>
+    </p>
+  </div>
+</div>

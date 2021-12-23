@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class='heading-wrap'>
+    <div class="u-wrap">
+        {{ partial "heading.html" . }}
+    </div>
+</div>
+<main>
+    {{ partial "content.html" . }}
+    {{ partial "prevnext.html" . }}
+</main>
+{{ end }}

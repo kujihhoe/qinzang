@@ -1,0 +1,4 @@
+{{ if .Params.img }}
+<div class="post-card" style="background-image: url({{ .Params.img }})"></div>
+{{ end }}
+{{ partial "post-info-sub.html" . }}

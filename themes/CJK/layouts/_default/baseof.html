@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  {{ partial "meta.html" . }}
+  {{ partial "title.html" . }}
+  {{ partial "link.html" . }}
+  {{ partial "load_site_assets.html" . }}
+  {{ block "load_page_assets" . }}
+    {{ with .Content }}{{ end }}
+  {{ end }}
+  {{ partial "assets.html" . }}
+  {{ partial "mathjax_support.html" . }}
+</head>
+<body>
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+</body>
+</html>

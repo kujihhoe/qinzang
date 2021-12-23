@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main>
+  <div class="u-wrap">
+    尚在建設，請諒解
+    <div class="discover-wrap">
+      <div class="discover a1">
+        {{ range site.Taxonomies.toc.Alphabetical }}
+        <div>
+          <a href="{{ .Page.Permalink }}" target="_blank">{{- .Page.Title | safeHTML -}}</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}

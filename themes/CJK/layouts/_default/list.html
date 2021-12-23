@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="heading-wrap">
+  <div class="u-wrap">
+    {{ partial "heading.html" . }}
+    {{ partial "wordcount.html" . }}
+  </div>
+</div>
+<main>
+  <div class="u-wrap">
+    {{ partial "archive.html" . }}
+  </div>
+</main>
+{{ end }}

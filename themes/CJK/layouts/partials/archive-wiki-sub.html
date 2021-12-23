@@ -1,0 +1,40 @@
+{{ $count6 := 0 }}{{ range .Pages }}{{ $count6 = add $count6 .WordCount }}{{ end }}
+{{ $leng := len .Pages }}
+{{ if eq .Page.Title "律曆初階" }}
+<div class="newsletter-wrap" style="margin-top: -5em;">
+  <div class="newsletter-grid a1">
+    <div>
+      <span class="des-base newsletter-time"><time>2021-12-03 v1.2</time></span>
+      <div class="discover-item newsletter-title">{{- .Page.Title -}}</div>
+      <div class="des-texo newsletter-des">
+        律曆向稱絕學，之所以覺得難，一方面，這是技術性的知識，是多數古代學者和現在的文史學者不太擅長的；另一方面，中國古代的學術體系跟西方相比有很大區別，精通現代天文學和樂理的人不一定看得懂中國古代的文獻；更重要的是，樂學的文獻大多已經泯滅於歷史中了，現在只能通過吉光片羽來鉤沈索隱，不過相比之下曆法的材料就保存得非常完整了。這本小冊子是一把鑰匙，幫助我打開了律曆之學的大門，現在我也希望把鑰匙交給讀者
+      </div>
+      <div class="des-base tl">凡 {{ $leng }} 篇　{{- $count6 }} 字　篇均 {{ div $count6 $leng }} 字</div>
+    </div>
+    <div>
+      <div class="newsletter-cover"
+        style="background-image: url('https://pic.imgdb.cn/item/6198b0202ab3f51d917440f6.png')"></div>
+    </div>
+  </div>
+</div>
+{{ else }}
+<h2 style="margin-bottom:0;" id="{{- .Page.Title | safeHTML -}}">{{ .Page.Title | safeHTML }}</h2>
+{{ if $leng }}<div class="des-base">凡 {{ $leng }} 篇　{{- $count6 }} 字　篇均 {{ div $count6 $leng }} 字</div>{{ end }}
+{{ end }}
+<div class='discover a1 {{ if eq .Page.Title "律曆初階" }}column3{{ end }}'>
+  {{ range sort .Pages "File.Path" }}
+  <div class="discover-grid">
+    {{ if .Params.img }}
+    <div class="post-card" style="background-image: url({{ .Params.img }})"></div>
+    {{ end }}
+    <div>
+      <span class="des-base des-des a1"><time>{{- .Date.Format "2006-01-02" }}</time>{{ if ne .Date .Lastmod }} >{{-
+        .Lastmod.Format "06-01-02" -}}{{ end }}
+      </span>
+      <div class="discover-item"><a href="{{ .Permalink }}" target="_blank">{{- .Title | safeHTML | markdownify
+          -}}</a></div>
+      <div class="des-base des-des">{{ .Params.description | safeHTML | markdownify }}</div>
+    </div>
+  </div>
+  {{ end }}
+</div>

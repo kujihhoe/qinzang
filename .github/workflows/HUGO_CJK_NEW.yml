@@ -1,0 +1,35 @@
+name: github pages
+
+# https://crontab.guru/ 檢查cron。經實驗，時區是UTC
+on:
+  push:
+    branches:
+      - master
+  # schedule:
+    # - cron: "0 */12 * * *"
+    # - cron: "0 0 * * *"
+    # - cron: "0 14 8 11 *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build
+        run: hugo --gc --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

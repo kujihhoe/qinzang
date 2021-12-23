@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="heading-wrap">
+  <div class="u-wrap">
+    {{ partialCached "banner.html" . }}
+  </div>
+</div>
+<main>
+  <div class="u-wrap">
+    {{ partial "archive.html" . }}
+  </div>
+</main>
+{{ end }}

@@ -1,0 +1,37 @@
+{{ if or .Params.vertical (and site.Params.vertical (ne .Params.vertical false)) }}
+<div class="vertical-wrap">
+  {{ partial "sidebar.html" . }}
+  <article class="DocSearch-content vertical">
+    {{ partial "article-front.html" . }}
+    {{ .Content }}
+  </article>
+  {{ if and .TableOfContents (gt (len .TableOfContents) 40 ) }}
+  <aside class="toc">
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+</div>
+
+{{ else }}
+{{ if eq .Page.Type "gallery" }}
+<article class="DocSearch-content">
+  {{ partial "article-front.html" . }}
+  {{ .Content }}
+</article>
+
+{{ else }}
+
+<div class="verticlal-false-wrap">
+  {{ partial "sidebar.html" . }}
+  <article class="DocSearch-content vertical-false">
+    {{ partial "article-front.html" . }}
+    {{ .Content }}
+  </article>
+  {{ if and .TableOfContents (gt (len .TableOfContents) 40 ) }}
+  <aside class="toc toc-verticlal-false">
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}
