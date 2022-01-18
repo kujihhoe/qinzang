@@ -1,0 +1,2389 @@
+<!doctype html><html lang=zh>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="看完此篇，可構建起一箇較完整的律學知識線條。本章非常簡單，無外乎一箇公式<n>log2(x)</n>、四箇音程<n>純四、純五、正大三、正小三</n>。重點掌握五度律、純律，其他作瞭解即可。文中介紹的律制都可以在赫赫曆藏中計算。">
+<meta name=generator content="Hugo 0.92.0">
+<title>律曆初階上｜一：律學 | 琴衡</title>
+<link rel=canonical href=/key/1/1/>
+<link rel=stylesheet href=/css/base.min.ebaa690fa3d03571c82d548d17680267cb3e787f11297ef714d549c3ca18cab7.css integrity="sha256-66ppD6PQNXHILVSNF2gCZ8s+eH8RKX73FNVJw8oYyrc=" crossorigin=anonymous>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}},window.addEventListener('load',a=>{document.querySelectorAll("mjx-container").forEach(function(a){a.parentElement.classList+='has-jax'})})</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+</head>
+<nav class=heading-wrap>
+<nav class="u-wrap banner-wrap">
+<div class="banner a1">
+<a href=/>琴衡</a>
+<details>
+<summary>導航</summary>
+<div class=banner-details>
+<div style=color:var(--gray)>文章</div>
+<div><a href=/post>論說</a></div>
+<div><a href=/diary>散記</a></div><div style=color:var(--gray)>知識</div>
+<div><a href=/read>讀書</a></div>
+<div><a href=/key>教程</a></div>
+<div><a href=/database>資料</a></div><div style=color:var(--gray)>通訊</div>
+<div><a href=/newsletter>琴易</a></div><br>
+<div><a href=/#qinpu>琴藏</a></div>
+</div>
+</details>
+<details>
+<summary>置頂</summary>
+<div class=banner-details>
+<div><a href=https://qin.kqh.me/about/>關於</a></div>
+<div><a href=https://qin.kqh.me/donate/>捐助本站</a></div>
+<div><a href=https://qin.kqh.me/changelog/>更新日誌</a></div>
+<div><a href=https://qin.kqh.me/blogroll/>古琴網站</a></div>
+</div>
+</details>
+</div>
+<div class="banner fr a1">
+<input id=algolia-autocomplete placeholder="搜索 無需回車" class=search>
+</div>
+</nav>
+</nav>
+<body>
+<div>
+<div class=bgshallowblack style=color:var(--bggray);margin-top:-2em;margin-bottom:-3em>
+<div class=u-wrap>
+<header class=nav-tab-wrap>
+<div class=nav-tab>
+<div>
+<h0 class=a1><a href=/#wiki>知識</a></h0>
+</div>
+<nav class=tab-wrap>
+<span class="DocSearch-lvl0 tab a1 a3"><a href=/read/>讀書</a></span>
+<span class="DocSearch-lvl0 tab a1 a3 active"><a href=/key/>教程</a></span>
+<span class="DocSearch-lvl0 tab a1 a3"><a href=/database/>資料</a></span>
+<span class="tab a1" style=font-size:.9em><a href=/about target=_blank>稿約</a></span>
+</nav>
+</div>
+</header>
+</div>
+</div>
+<div class=bgshallowblack style=max-height:70vh;margin-bottom:22vh>
+<div class=article-cover style=background-image:url(https://pic.imgdb.cn/item/61ac49422ab3f51d91d48e4a.png)>
+<div class=article-cover-title>
+<h1 class=DocSearch-lvl1>
+律曆初階上｜一：律學</h1>
+<div class="des-taxo black">看完此篇，可構建起一箇較完整的律學知識線條。本章非常簡單，無外乎一箇公式<n>log2(x)</n>、四箇音程<n>純四、純五、正大三、正小三</n>。重點掌握五度律、純律，其他作瞭解即可。文中介紹的律制都可以在赫赫曆藏中計算。</div>
+</div>
+</div>
+</div>
+</div>
+<main>
+<div class=u-wrap>
+<div class=horizontal-wrap>
+<aside class="toc
+toc-horizontal toc-left-horizontal">
+<ul>
+<li><a href=https://qin.kqh.me/key/1/0/>律曆初階｜前言</a></li>
+<li><a href=https://qin.kqh.me/key/1/1/>律曆初階上｜一：律學</a></li>
+<li><a href=https://qin.kqh.me/key/1/2/>律曆初階上｜二：琴律學</a></li>
+<li><a href=https://qin.kqh.me/key/1/3/>律曆初階上｜三：調學</a></li>
+<li><a href=https://qin.kqh.me/key/1/4/>律曆初階上｜四：琴調學</a></li>
+<li><a href=https://qin.kqh.me/key/1/5/>律曆初階上｜五：清商樂、唐宋俗樂</a></li>
+</ul>
+</aside>
+<article class="DocSearch-content horizontal">
+<div class=article-info>
+<div class="des-base a1">
+<time datetime=2017-12-11>
+2017-12-11
+>21-12-06
+</time>
+<span><strong>字數</strong> 11247</span>
+</div>
+<div class="des-base des-tag a1">
+<span><strong>作者</strong>
+<a href=/author/%e6%9f%af%e6%a3%8b%e7%80%9a%e5%ad%b8>@柯棋瀚學</a></span>
+　<span><strong>分類</strong>
+<a href=/category/%e7%90%b4>[琴]</a>
+　<strong>系列</strong>
+<a href=/key#%e5%be%8b%e6%9b%86%e5%88%9d%e9%9a%8e>律曆初階｜</a>
+　<span><strong>標籤</strong>
+<a href=/tag/%e7%90%b4%e7%90%86>#琴理</a></span>
+</div>
+<div class="des-base des-tag a1">
+<span><strong>版權</strong></span>
+<a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank>CC BY-NC-SA 4.0</a>，非商業用途可隨意使用
+</div>
+</div>
+<h2 id=基礎知識>基礎知識</h2>
+<h3 id=槪念>槪念</h3>
+<ul>
+<li><bc>調音、律制 tuning</bc> 規定音階中各音高的數學方法。<bc>律學</bc> 研究律制的學問</li>
+<li><bc>國際標準音高</bc> 從古到今不斷升高。有一種方法是：C 爲 $2^8 = 256 hz$，這箇數字非常優美，所以稱爲「物理學高度」，五度相生律 $A1 = 256 × \frac{27}{16} = 432$，純律 $A1 = 256 × \frac{5}{3} = 426.667$</li>
+<li><bc>音程</bc> 兩箇音的距離。音程的命名規則：一度、四度、五度、八度完全和諧，因此前加「純」perfect，一度、四度、五度、八度只有減 diminished —純—增 augmented，其餘的二三六七度只有減—小 minor —大 major —增。例如，1—♭3 是小三度，2—♯6 是增五度。大音階中，每箇音和第一箇音<n>第一音級</n>的距離爲「純」或「大」，如 C-D 是大二度，C-F 是純四度</li>
+<li><bc>生程 generator</bc> 生律所用到的音程。比如三分損益法的生程就是純五度 $\frac{3}{2}$</li>
+<li><bc>轉位</bc> 生律次數相同，方向相反，相加等於八度。轉位音程換算規則：增─減、大─小、純─純。如增二度—減七度，大三度—小六度，如 2—6 爲純五度，6—2 爲純四度</li>
+<li><bc>音差 comma</bc> 某種細微的音程差別，如<u>最大音差</u> comma maxima, Pythagorean comma、<u>普通音差</u>或<u>合音差</u> syntonic comma</li>
+<li><bc>限 limit</bc> 某種調音的生程頻率比的分子分母分解質因數，所得最大的質數。比如五限純律之所以是五限，因爲三種生程 $\frac{3}{2}\space \frac{5}{4}\space \frac{6}{5}$ 分解質因數，最大是 5</li>
+<li><bc>純律 just intonation</bc> 有廣義狹義之分，<strong>廣義</strong>指頻率比爲簡單整數之比的<u>調音</u>，用這種方法調音的音程稱<u>正音程</u> just/pure intervals。之所以和諧，是因爲這樣產生的和弦處於一箇泛音列中，很接近一箇單音。例如頻率比爲 1 和 $\frac{3}{2}$ 的兩箇音，$\frac{3}{2}$ 的泛音列是 1 的泛音列的子集。而<strong>狹義</strong>的純律指五限純律</li>
+<li><bc>調律 temperament</bc> 爲了某種特定的音樂實踐，將一部分有缺陷的音程轉移到相對完美的音程中；也可以說，調和了某種音差的調音是調律。純律與調律是相對而言的概念。在一箇只有 12 音的鍵盤中，必須在三六度的協和程度、四五度的協和程度、自由轉調等因素中權衡，例如四分音差折中律犧牲了純五度的協和，實現了大三度的協和，十二等程律犧牲了三六度的協和，取得了移調的自由。根據小樣本調查，大部分現代人能聽出四分律和十二等程律的區別，認爲四分律聲音融合較差，一些音程較突兀。</li>
+<li><bc>和弦 chord</bc> 組合在一起的多箇不同音高的音。舉例：
+<ul>
+<li>大三和弦：大三 + 小三 = 純五，如：1-3-5</li>
+<li>小三和弦：小三 + 大三 = 純五，如：2-4-6</li>
+<li>大七和弦：大三 + 純五 = 大七，如：1-3-7</li>
+<li>小七和弦：小三 + 純五 = 小七，如：2-4-1</li>
+</ul>
+</li>
+<li>命名：根據生律順序，以 F C G D A E B 爲一箇單位，依次排下來就是 ♭F ♭C ♭G ♭D ♭A ♭E ♭B F C G D A E B ♯F ♯C ♯G ♯D ♯A ♯E ♯B⋯⋯</li>
+</ul>
+<h3 id=發音原理>發音原理</h3>
+<p>樂器根據發音原理可分爲五類：</p>
+<ul>
+<li><bc>弦振</bc> 弦長和頻率比互爲倒數</li>
+<li><bc>氣振</bc> 運用超吹的方法，可以使倍音轉化爲基音<n>類似弦振的泛音</n>。管子分爲開管與閉管，開管兩端敞開，閉管有一端封閉，同樣長度，開管比閉管高八度。氣柱長度比管子長度略長，因而需要進行管口校正</li>
+<li><bc>體振</bc> 鑼、鈸、鐘、音叉等</li>
+<li><bc>膜振</bc> 鼓等。膜振不能發出整數倍的音，因而音高模糊不定</li>
+</ul>
+<p>弦振截止之處稱爲節點，弦振中心稱爲腹點。一根弦除了整體振動，還會分節振動，同時包含基音、二倍音 $\frac{3}{2}$、三倍音 $\frac{4}{3}$……人爲迫使弦分節振動，就能發出泛音。這一系列音就稱爲<u>泛音列</u> Harmonic series。基音上方的其他音叫<u>上方分音</u> upper partials 或<u>泛音</u> overtones。除了音叉，大多數樂器發出的每箇音都是基音和上方泛音的複合音。</p>
+<p><img src=https://pic3.zhimg.com/v2-7abcaf95e7827c20a01538abb857a746_r.jpg width=300> <img src=https://pic.imgdb.cn/item/61999c0d2ab3f51d91dc2db2.png width=550></p>
+<h3 id=音律計算法>音律計算法</h3>
+<p>只有<b>頻率比</b>纔能表示聽覺上的音程大小，因此計算時是以「乘積」爲基準，而不是簡單的「乘法」，涉及乘積的運算爲指數、對數、開方。用對數把頻率比化爲音程，得到音分，就可以進行簡單的加減運算了。計算音律時一般限於一箇八度之內，要把頻率比歸到 1—2 之內。</p>
+<p>兩音程之和的頻率比 ＝ 兩音程頻率比相乘，兩音程之差的頻率比 ＝ 兩音程頻率比相除。如，純四度和正大三度之和爲純律大六度，其頻率比爲 $\frac{4}{3} × \frac{5}{4} = \frac{5}{3}$。一般不用頻率比表示音程，而用音程値。音程値有四種：對數値、八度値、音分値、平均音程値。</p>
+<ul>
+<li><bc>八度値</bc> $八度値 = log_{2}{頻率比}$。一箇八度的八度値 = $log_{2}{2} = 1$。上圖爲八度値函數圖像。</li>
+<li><bc>音分</bc> 符號 ¢ 。把一箇八度分爲 1200 份，卽 $音分 ＝ 1200 × 八度値$ ，等程律半音的音程爲 100 音分。1 音分頻率比 = $\sqrt[1200]{2} ≒ 1.0005777895$</li>
+</ul>
+<h3 id=音程表>音程表</h3>
+<h4 id=表一五度律五限七限純律>表一：五度律、五限七限純律</h4>
+<p>除了 C D F G 是共用，其他加了上下線的都是純律。「共有」指五度律、純律共有的音；「純律」指五限純律；「七限」指七限純律。徽位是直接用程序把弦長比轉換爲徽位。純律只列骨幹音，其他的見音系網。</p>
+<table>
+<thead>
+<tr>
+<th>音分</th>
+<th>頻率比</th>
+<th>共有</th>
+<th>五度</th>
+<th>純律</th>
+<th>七限</th>
+<th>下準徽</th>
+<th>中準徽</th>
+<th>上準徽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>62.96</td>
+<td>28/27</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>70.67</td>
+<td>25/24</td>
+<td></td>
+<td></td>
+<td>♯<span class=dnline2>1</span>小半</td>
+<td></td>
+<td>13.68</td>
+<td>6.8</td>
+<td>3.8</td>
+</tr>
+<tr>
+<td>90.22</td>
+<td>256/243</td>
+<td></td>
+<td>♭2小半</td>
+<td></td>
+<td></td>
+<td>13.5938</td>
+<td>6.7461</td>
+<td>3.7461</td>
+</tr>
+<tr>
+<td>111.73</td>
+<td>16/15</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline1>2</span>大半</td>
+<td></td>
+<td>13.5</td>
+<td>6.6875</td>
+<td>3.6875</td>
+</tr>
+<tr>
+<td>113.69</td>
+<td>2187/2048</td>
+<td></td>
+<td>♯1大半</td>
+<td></td>
+<td></td>
+<td>13.4915</td>
+<td>6.6822</td>
+<td>3.6822</td>
+</tr>
+<tr>
+<td>119.44</td>
+<td>15/14</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>180.45</td>
+<td>65536/59049</td>
+<td></td>
+<td>𝄫3減三</td>
+<td></td>
+<td></td>
+<td>13.2081</td>
+<td>6.5051</td>
+<td>3.5051</td>
+</tr>
+<tr>
+<td>182.40</td>
+<td>10/9</td>
+<td></td>
+<td></td>
+<td><span class=dnline1>2</span>小全</td>
+<td>2</td>
+<td>13.2</td>
+<td>6.5</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>203.91</td>
+<td>9/8</td>
+<td>2大全</td>
+<td></td>
+<td></td>
+<td></td>
+<td>13.1111</td>
+<td>6.4444</td>
+<td>3.4444</td>
+</tr>
+<tr>
+<td>223.46</td>
+<td>256/225</td>
+<td></td>
+<td></td>
+<td>𝄫<span class=upline2>3</span>減三</td>
+<td></td>
+<td>13.0313</td>
+<td>6.3945</td>
+<td>3.3945</td>
+</tr>
+<tr>
+<td>231.17</td>
+<td>8/7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>𝄫3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>266.87</td>
+<td>7/6</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯2</td>
+<td>12.571</td>
+<td>6.286</td>
+<td>3.286</td>
+</tr>
+<tr>
+<td>274.58</td>
+<td>75/64</td>
+<td></td>
+<td></td>
+<td>♯<span class=dnline2>2</span>增二</td>
+<td></td>
+<td>12.48</td>
+<td>6.2667</td>
+<td>3.2667</td>
+</tr>
+<tr>
+<td>294.13</td>
+<td>32/27</td>
+<td></td>
+<td>♭3小三</td>
+<td></td>
+<td></td>
+<td>12.25</td>
+<td>6.2188</td>
+<td>3.2188</td>
+</tr>
+<tr>
+<td>315.64</td>
+<td>6/5</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline1>3</span>小三</td>
+<td>♭3</td>
+<td>12</td>
+<td>6.1667</td>
+<td>3.1667</td>
+</tr>
+<tr>
+<td>317.60</td>
+<td>19683/16384</td>
+<td></td>
+<td>♯2增二</td>
+<td></td>
+<td></td>
+<td>11.9718</td>
+<td>6.162</td>
+<td>3.162</td>
+</tr>
+<tr>
+<td>323.35</td>
+<td>135/112</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>384.36</td>
+<td>8192/6561</td>
+<td></td>
+<td>♭4減四</td>
+<td></td>
+<td></td>
+<td>11.0271</td>
+<td>6.0045</td>
+<td>3.0045</td>
+</tr>
+<tr>
+<td>386.31</td>
+<td>5/4</td>
+<td></td>
+<td></td>
+<td><span class=dnline1>3</span>大三</td>
+<td>3</td>
+<td>11</td>
+<td>6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>407.82</td>
+<td>81/64</td>
+<td></td>
+<td>3大三</td>
+<td></td>
+<td></td>
+<td>10.8025</td>
+<td>5.9259</td>
+<td>2.9259</td>
+</tr>
+<tr>
+<td>427.37</td>
+<td>32/25</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline2>4</span>減四</td>
+<td></td>
+<td>10.625</td>
+<td>5.8594</td>
+<td>2.8594</td>
+</tr>
+<tr>
+<td>435.08</td>
+<td>9/7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>470.78</td>
+<td>21/16</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>476.54</td>
+<td>320/243</td>
+<td></td>
+<td></td>
+<td><span class=dnline1>4</span>窄四</td>
+<td></td>
+<td>10.1875</td>
+<td>5.6953</td>
+<td>2.6953</td>
+</tr>
+<tr>
+<td>478.49</td>
+<td>675/512</td>
+<td></td>
+<td></td>
+<td>♯<span class=dnline2>3</span>增三</td>
+<td></td>
+<td>10.1704</td>
+<td>5.6889</td>
+<td>2.6889</td>
+</tr>
+<tr>
+<td>498.04</td>
+<td>4/3</td>
+<td>4純四</td>
+<td></td>
+<td></td>
+<td></td>
+<td>10</td>
+<td>5.625</td>
+<td>2.625</td>
+</tr>
+<tr>
+<td>519.55</td>
+<td>27/20</td>
+<td></td>
+<td></td>
+<td><span class=upline1>4</span>寬四</td>
+<td></td>
+<td>9.8889</td>
+<td>5.5556</td>
+<td>2.5556</td>
+</tr>
+<tr>
+<td>521.51</td>
+<td>177147/131072</td>
+<td></td>
+<td>♯3增三</td>
+<td></td>
+<td></td>
+<td>9.8789</td>
+<td>5.5493</td>
+<td>2.5493</td>
+</tr>
+<tr>
+<td>582.51</td>
+<td>7/5</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>588.27</td>
+<td>1024/729</td>
+<td></td>
+<td>♭5減五</td>
+<td></td>
+<td></td>
+<td>9.543</td>
+<td>5.3394</td>
+<td>2.3394</td>
+</tr>
+<tr>
+<td>590.22</td>
+<td>45/32</td>
+<td></td>
+<td></td>
+<td>♯<span class=dnline1>4</span>增四</td>
+<td></td>
+<td>9.5333</td>
+<td>5.3333</td>
+<td>2.3333</td>
+</tr>
+<tr>
+<td>609.77</td>
+<td>64/45</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline1>5</span>減五</td>
+<td></td>
+<td>9.4375</td>
+<td>5.2734</td>
+<td>2.2734</td>
+</tr>
+<tr>
+<td>611.73</td>
+<td>729/512</td>
+<td></td>
+<td>♯4增四</td>
+<td></td>
+<td></td>
+<td>9.428</td>
+<td>5.2675</td>
+<td>2.2675</td>
+</tr>
+<tr>
+<td>617.49</td>
+<td>10/7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>678.49</td>
+<td>262144/177147</td>
+<td></td>
+<td>𝄫6減六</td>
+<td></td>
+<td></td>
+<td>9.1091</td>
+<td>5.0682</td>
+<td>2.0682</td>
+</tr>
+<tr>
+<td>680.45</td>
+<td>40/27</td>
+<td></td>
+<td></td>
+<td><span class=dnline1>5</span>窄五</td>
+<td></td>
+<td>9.1</td>
+<td>5.0625</td>
+<td>2.0625</td>
+</tr>
+<tr>
+<td>701.96</td>
+<td>3/2</td>
+<td>5純五</td>
+<td></td>
+<td></td>
+<td></td>
+<td>9</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>723.46</td>
+<td>243/160</td>
+<td></td>
+<td></td>
+<td><span class=upline1>5</span>寬五</td>
+<td></td>
+<td>8.8765</td>
+<td>4.9506</td>
+<td></td>
+</tr>
+<tr>
+<td>764.92</td>
+<td>14/9</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>772.63</td>
+<td>25/16</td>
+<td></td>
+<td></td>
+<td>♯<span class=dnline2>5</span>增五</td>
+<td></td>
+<td>8.6</td>
+<td>4.84</td>
+<td></td>
+</tr>
+<tr>
+<td>792.18</td>
+<td>128/81</td>
+<td></td>
+<td>♭6小六</td>
+<td></td>
+<td></td>
+<td>8.4922</td>
+<td>4.7969</td>
+<td></td>
+</tr>
+<tr>
+<td>813.69</td>
+<td>8/5</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline1>6</span>小六</td>
+<td></td>
+<td>8.375</td>
+<td>4.75</td>
+<td></td>
+</tr>
+<tr>
+<td>815.64</td>
+<td>6561/4096</td>
+<td></td>
+<td>♯5增五</td>
+<td></td>
+<td></td>
+<td>8.3644</td>
+<td>4.7458</td>
+<td></td>
+</tr>
+<tr>
+<td>821.40</td>
+<td>45/28</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>882.40</td>
+<td>32768/19683</td>
+<td></td>
+<td>𝄫7減七</td>
+<td></td>
+<td></td>
+<td>8.0102</td>
+<td>4.6041</td>
+<td></td>
+</tr>
+<tr>
+<td>884.36</td>
+<td>5/3</td>
+<td></td>
+<td></td>
+<td><span class=dnline1>6</span>大六</td>
+<td>6</td>
+<td>8</td>
+<td>4.6</td>
+<td></td>
+</tr>
+<tr>
+<td>905.87</td>
+<td>27/16</td>
+<td></td>
+<td>6大六</td>
+<td></td>
+<td></td>
+<td>7.9259</td>
+<td>4.5556</td>
+<td></td>
+</tr>
+<tr>
+<td>925.42</td>
+<td>128/75</td>
+<td></td>
+<td></td>
+<td>𝄫<span class=upline2>7</span>減七</td>
+<td></td>
+<td>7.8594</td>
+<td>4.5156</td>
+<td></td>
+</tr>
+<tr>
+<td>933.13</td>
+<td>12/7</td>
+<td></td>
+<td></td>
+<td></td>
+<td>𝄫7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>968.83</td>
+<td>7/4</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>976.54</td>
+<td>225/128</td>
+<td></td>
+<td></td>
+<td>♯<span class=dnline2>6</span>增六</td>
+<td></td>
+<td>7.6889</td>
+<td>4.4133</td>
+<td></td>
+</tr>
+<tr>
+<td>996.09</td>
+<td>16/9</td>
+<td>♭7小七</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7.625</td>
+<td>4.375</td>
+<td></td>
+</tr>
+<tr>
+<td>1017.59</td>
+<td>9/5</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline1>7</span>小七</td>
+<td></td>
+<td>7.5556</td>
+<td>4.3333</td>
+<td></td>
+</tr>
+<tr>
+<td>1019.55</td>
+<td>59049/32768</td>
+<td></td>
+<td>♯6增六</td>
+<td></td>
+<td></td>
+<td>7.5493</td>
+<td>4.3296</td>
+<td></td>
+</tr>
+<tr>
+<td>1025.31</td>
+<td>405/224</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1086.31</td>
+<td>4096/2187</td>
+<td></td>
+<td>♭8減八</td>
+<td></td>
+<td></td>
+<td>7.3394</td>
+<td>4.2036</td>
+<td></td>
+</tr>
+<tr>
+<td>1088.27</td>
+<td>15/8</td>
+<td></td>
+<td></td>
+<td><span class=dnline1>7</span>大七</td>
+<td>7</td>
+<td>7.3333</td>
+<td>4.2</td>
+<td></td>
+</tr>
+<tr>
+<td>1109.78</td>
+<td>243/128</td>
+<td></td>
+<td>7大七</td>
+<td></td>
+<td></td>
+<td>7.2675</td>
+<td>4.1605</td>
+<td></td>
+</tr>
+<tr>
+<td>1129.33</td>
+<td>48/25</td>
+<td></td>
+<td></td>
+<td>♭<span class=upline2>8</span>減八</td>
+<td></td>
+<td>7.2083</td>
+<td>4.125</td>
+<td></td>
+</tr>
+<tr>
+<td>1137.04</td>
+<td>27/14</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id=表二十二十九等程律四分三分折中律>表二：十二十九等程律、四分三分折中律</h4>
+<p>等程律的頻率比是我選擇的漸進分數。</p>
+<table>
+<thead>
+<tr>
+<th>純律及誤差</th>
+<th>音分</th>
+<th>十二</th>
+<th>十九</th>
+<th>四分</th>
+<th>三分</th>
+<th>頻率比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>41.06</td>
+<td></td>
+<td></td>
+<td>𝄫2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>62.57</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯1 𝄫2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>63.16</td>
+<td></td>
+<td>①♯1增一𝄫2减二</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>76.05</td>
+<td></td>
+<td></td>
+<td>♯1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>100</td>
+<td>①♯1增一♭2小二</td>
+<td></td>
+<td></td>
+<td></td>
+<td>196/185</td>
+</tr>
+<tr>
+<td></td>
+<td>117.11</td>
+<td></td>
+<td></td>
+<td>♭2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>126.07</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>126.32</td>
+<td></td>
+<td>②♭2小二</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>小全 10/9<br>182.40</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>188.64</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>189.47</td>
+<td></td>
+<td>③2大二</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>193.16</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>200</td>
+<td>②2大二𝄫3減三</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1769/1576</td>
+</tr>
+<tr>
+<td>大全 9/8<br>203.91</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>234.22</td>
+<td></td>
+<td></td>
+<td>𝄫3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>252.14</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯2 𝄫3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>252.63</td>
+<td></td>
+<td>④♯2增二𝄫3减三</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>269.21</td>
+<td></td>
+<td></td>
+<td>♯2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>300</td>
+<td>③♯2增二♭3小三</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1785/1501</td>
+</tr>
+<tr>
+<td></td>
+<td>310.26</td>
+<td></td>
+<td></td>
+<td>♭3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>小三 6/5<br>315.64</td>
+<td></td>
+<td>-15.64¢</td>
+<td>+0.15¢</td>
+<td>-5.38¢</td>
+<td>♭3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>315.79</td>
+<td></td>
+<td>⑤♭3小三</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>345.25</td>
+<td></td>
+<td></td>
+<td>♭3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>378.21</td>
+<td></td>
+<td></td>
+<td></td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>378.95</td>
+<td></td>
+<td>⑥3大三</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>大三 5/4<br>386.31</td>
+<td></td>
+<td>+13.69¢</td>
+<td>-7.36¢</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>400</td>
+<td>④3大三♭4減四</td>
+<td></td>
+<td></td>
+<td></td>
+<td>635/504</td>
+</tr>
+<tr>
+<td></td>
+<td>427.37</td>
+<td></td>
+<td></td>
+<td>♭4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>441.71</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯3 ♭4</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>442.11</td>
+<td></td>
+<td>⑦♯3增三♭4减四</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>462.36</td>
+<td></td>
+<td></td>
+<td>♯3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>純四 4/3<br>498.04</td>
+<td></td>
+<td>+1.96¢</td>
+<td>+7.22¢</td>
+<td>+5.38¢</td>
+<td>+7.17¢</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>500</td>
+<td>⑤♯3增三4純四</td>
+<td></td>
+<td></td>
+<td></td>
+<td>3544/2655</td>
+</tr>
+<tr>
+<td></td>
+<td>503.42</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>505.21</td>
+<td></td>
+<td></td>
+<td></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>505.26</td>
+<td></td>
+<td>⑧4純四</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>567.78</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯4</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>568.42</td>
+<td></td>
+<td>⑨♯4增四</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>579.47</td>
+<td></td>
+<td></td>
+<td>♯4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>600</td>
+<td>⑥♯4增四♭5減五</td>
+<td></td>
+<td></td>
+<td></td>
+<td>3363/2378</td>
+</tr>
+<tr>
+<td></td>
+<td>620.53</td>
+<td></td>
+<td></td>
+<td>♭5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>631.28</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭5</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>631.58</td>
+<td></td>
+<td>⑩♭5减五</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>693.85</td>
+<td></td>
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>694.74</td>
+<td></td>
+<td>⑪5純五</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>696.58</td>
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>700</td>
+<td>⑦5純五𝄫6減六</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2655/1772</td>
+</tr>
+<tr>
+<td>純五 3/2<br>701.96</td>
+<td></td>
+<td>-1.96¢</td>
+<td>-7.22¢</td>
+<td>-5.38¢</td>
+<td>-8.11¢</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>737.64</td>
+<td></td>
+<td></td>
+<td>𝄫6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>757.35</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯5 𝄫6</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>758.89</td>
+<td></td>
+<td>⑫♯5增五𝄫6减六</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>772.63</td>
+<td></td>
+<td></td>
+<td>♯5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>800</td>
+<td>⑧♯5增五♭6小六</td>
+<td></td>
+<td></td>
+<td></td>
+<td>4813/3032</td>
+</tr>
+<tr>
+<td></td>
+<td>813.69</td>
+<td></td>
+<td></td>
+<td>♭6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>820.86</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭6</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>821.05</td>
+<td></td>
+<td>⑬♭6小六</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>883.42</td>
+<td></td>
+<td></td>
+<td></td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>884.21</td>
+<td></td>
+<td>⑭6大六</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>889.74</td>
+<td></td>
+<td></td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>900</td>
+<td>⑨6大六𝄫7減七</td>
+<td></td>
+<td></td>
+<td></td>
+<td>3002/1785</td>
+</tr>
+<tr>
+<td></td>
+<td>930.79</td>
+<td></td>
+<td></td>
+<td>𝄫7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>946.92</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯6 𝄫7</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>947.37</td>
+<td></td>
+<td>⑮♯6增六𝄫7减七</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>965.78</td>
+<td></td>
+<td></td>
+<td>♯6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1000</td>
+<td>⑩♯6增六♭7小七</td>
+<td></td>
+<td></td>
+<td></td>
+<td>4679/2626</td>
+</tr>
+<tr>
+<td></td>
+<td>1006.84</td>
+<td></td>
+<td></td>
+<td>♭7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1010.43</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♭7</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1010.53</td>
+<td></td>
+<td>⑯♭7小七</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1073.00</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1073.68</td>
+<td></td>
+<td>⑰7大七</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1082.89</td>
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1100</td>
+<td>⑪7大七♭8減八</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2943/1559</td>
+</tr>
+<tr>
+<td></td>
+<td>1123.95</td>
+<td></td>
+<td></td>
+<td>♭8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1136.50</td>
+<td></td>
+<td></td>
+<td></td>
+<td>♯7 ♭8</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1136.84</td>
+<td></td>
+<td>⑱♯7增七♭8减八</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1158.94</td>
+<td></td>
+<td></td>
+<td>♯7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1199.06</td>
+<td></td>
+<td></td>
+<td></td>
+<td>音差</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>用音分加一下就知道，五度律、純律是增四，五度律是三箇大全音，純律是兩箇大全音+純律小全音；十二等程律的三全音是增四減五；十九等程律小三全音是增四，大三全音是減五。</p>
+<h2 id=五度律三限純律>五度律　三限純律</h2>
+<h3 id=西方五度相生律>西方：五度相生律</h3>
+<p>畢達哥拉斯調音 Pythagorean tuning 是西方第一箇理論化的調音系統。</p>
+<h4 id=生律法>生律法</h4>
+<p>五度律用兩種生律方法：</p>
+<ul>
+<li>上生、隔八相生、純五度：一直乘 $\frac{3}{2}$</li>
+<li>下生、隔六相生、純四度：一直乘 $\frac{4}{3}$</li>
+</ul>
+<p>用到的生程是 $\frac{3}{2}\space \frac{4}{3}$，最大質因數是 3，所以本質上是三限純律。</p>
+<table>
+<thead>
+<tr>
+<th>上生</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>頻率</td>
+<td>$\frac{3}{2}$</td>
+<td>$\frac{9}{8}$</td>
+<td>$\frac{27}{16}$</td>
+<td>$\frac{81}{64}$</td>
+<td>$\frac{243}{128}$</td>
+<td>$\frac{729}{512}$</td>
+<td>$\frac{2187}{2048}$</td>
+<td>$\frac{6561}{4096}$</td>
+<td>$\frac{19683}{16384}$</td>
+<td>$\frac{59049}{32768}$</td>
+<td>$\frac{177147}{131072}$</td>
+<td>$\frac{531441}{524288}$</td>
+</tr>
+<tr>
+<td>音分</td>
+<td>702</td>
+<td>204</td>
+<td>906</td>
+<td>408</td>
+<td>1110</td>
+<td>612</td>
+<td>114</td>
+<td>816</td>
+<td>318</td>
+<td>1020</td>
+<td>522</td>
+<td>23.46</td>
+</tr>
+<tr>
+<td>音名</td>
+<td>G</td>
+<td>D</td>
+<td>A</td>
+<td>E</td>
+<td>B</td>
+<td>♯F</td>
+<td>♯C</td>
+<td>♯G</td>
+<td>♯D</td>
+<td>♯A</td>
+<td>♯E</td>
+<td>𝄪B</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>下生</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>頻率</td>
+<td>$\frac{4}{3}$</td>
+<td>$\frac{16}{9}$</td>
+<td>$\frac{32}{27}$</td>
+<td>$\frac{128}{81}$</td>
+<td>$\frac{256}{243}$</td>
+<td>$\frac{1024}{729}$</td>
+<td>$\frac{4096}{2187}$</td>
+<td>$\frac{8192}{6561}$</td>
+<td>$\frac{32768}{19683}$</td>
+<td>$\frac{65536}{59049}$</td>
+<td>$\frac{262144}{177147}$</td>
+<td>$\frac{1048576}{531441}$</td>
+</tr>
+<tr>
+<td>音分</td>
+<td>498</td>
+<td>996</td>
+<td>294</td>
+<td>792</td>
+<td>90</td>
+<td>588</td>
+<td>1086</td>
+<td>384</td>
+<td>882</td>
+<td>180</td>
+<td>678</td>
+<td>1176.54</td>
+</tr>
+<tr>
+<td>音名</td>
+<td>F</td>
+<td>♭B</td>
+<td>♭E</td>
+<td>♭A</td>
+<td>♭D</td>
+<td>♭G</td>
+<td>♭C</td>
+<td>♭F</td>
+<td>𝄫B</td>
+<td>𝄫E</td>
+<td>𝄫A</td>
+<td>𝄫D</td>
+</tr>
+</tbody>
+</table>
+<p>五度律面臨不能周而復始的問題，生 12 次後多出 23.5 音分，不能回到始發律，稱<u>最大音差</u>、<u>畢氏音差</u>。</p>
+<p>$1\overbrace{×\frac{3}{2}×\frac{3}{2}\dots×\frac{3}{2}}^{12} = \frac{531441}{524288} = 𝄪B, 23.5¢$</p>
+<h4 id=半音與全音>半音與全音</h4>
+<p>五度律的半音分兩種，五度律小半音和大半音。</p>
+<ul>
+<li>小半音/自然半音：向下生 5 次，$\frac{2}{3}^5 × 2^3 = \frac{256}{243}, 90¢$</li>
+<li>大半音/變化半音：向上生 7 次，$\frac{3}{2}^7 × \frac{1}{2}^4 = \frac{2187}{2048}, 114¢$</li>
+<li>大全音：向上生 2 次，$\frac{3}{2}^2 / 2 = \frac{9}{8}, 204¢$</li>
+<li>大全音 = 大半音 + 小半音</li>
+<li>最大音差 = 大半音 - 小半音 = 向上生 12 次，$\frac{531441}{524288}, 23.5¢$</li>
+</ul>
+<p>例如：<strong>D</strong> 小半音 <strong>♭E</strong> 最大音差 <strong>♯D</strong> 小半音 <strong>E</strong></p>
+<h4 id=音階>音階</h4>
+<p>五度律大音階：向上生 5 次，向下生 1 次。</p>
+<table>
+<thead>
+<tr>
+<th>音名</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>頻率比</strong></td>
+<td>1</td>
+<td>9/8</td>
+<td>81/64</td>
+<td>4/3</td>
+<td>3/2</td>
+<td>27/16</td>
+<td>243/128</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>相鄰頻率比</strong></td>
+<td>1</td>
+<td>9/8</td>
+<td>9/8</td>
+<td>256/243</td>
+<td>9/8</td>
+<td>9/8</td>
+<td>9/8</td>
+<td>256/243</td>
+</tr>
+<tr>
+<td><strong>音分</strong></td>
+<td>0</td>
+<td>204</td>
+<td>408</td>
+<td>498</td>
+<td>702</td>
+<td>906</td>
+<td>1110</td>
+<td>1200</td>
+</tr>
+<tr>
+<td><strong>相鄰音程</strong></td>
+<td></td>
+<td>大全音</td>
+<td>大全音</td>
+<td>小半音</td>
+<td>大全音</td>
+<td>大全音</td>
+<td>大全音</td>
+<td>小半音</td>
+</tr>
+</tbody>
+</table>
+<p>五度律自然小音階：向上生 2 次，向下生 4 次。</p>
+<table>
+<thead>
+<tr>
+<th>音名</th>
+<th>C</th>
+<th>D</th>
+<th>♭E</th>
+<th>F</th>
+<th>G</th>
+<th>♭A</th>
+<th>♭B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>頻率比</strong></td>
+<td>1</td>
+<td>9/8</td>
+<td>32/27</td>
+<td>4/3</td>
+<td>3/2</td>
+<td>128/81</td>
+<td>16/9</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>相鄰頻率比</strong></td>
+<td>1</td>
+<td>9/8</td>
+<td>256/243</td>
+<td>9/8</td>
+<td>9/8</td>
+<td>256/243</td>
+<td>9/8</td>
+<td>9/8</td>
+</tr>
+<tr>
+<td><strong>音分</strong></td>
+<td>0</td>
+<td>204</td>
+<td>294</td>
+<td>498</td>
+<td>702</td>
+<td>792</td>
+<td>996</td>
+<td>1200</td>
+</tr>
+<tr>
+<td><strong>相鄰音程</strong></td>
+<td></td>
+<td>大全音</td>
+<td>小半音</td>
+<td>大全音</td>
+<td>大全音</td>
+<td>小半音</td>
+<td>大全音</td>
+<td>大全音</td>
+</tr>
+</tbody>
+</table>
+<p>關於音階的產生原理，可以看好和弦視頻 <a href=https://www.bilibili.com/video/av13380108>小调的三种模式：自然／和声／旋律小音阶！</a>。</p>
+<h3 id=中國三分損益法>中國：三分損益法</h3>
+<h4 id=生律法-1>生律法</h4>
+<p>以長度進行計算，長度是頻率的倒數。三分損一：$× \frac{2}{3}$，三分益一：$× \frac{4}{3}$，一損一益交替進行。這其實只是爲了歸到一箇八度之內，本質都是頻率比 $× \frac{3}{2}$ 的向上純五度相生。正統的三分損益法是先損，這樣黃鐘就是最低的一箇音。若先益一，則林鐘徵在黃鐘宮之下，稱「下徵」。</p>
+<p>黃鐘 81<n>損</n><br>
+林鐘 54<n>益</n><br>
+太簇 72<n>損</n><br>
+南呂 48<n>益</n><br>
+姑冼 64<n>損</n><br>
+應鐘 $42\frac{2}{3}$<n>益</n><br>
+蕤賓 $56\frac{8}{9}$<n>益</n><br>
+大呂 $75\frac{23}{27}$<n>損</n><br>
+夷則 $50\frac{46}{81}$<n>益</n><br>
+夾鐘 $67\frac{103}{243}$<n>損</n><br>
+无射 $44\frac{692}{729}$<n>益</n><br>
+仲呂 $59\frac{2039}{2187}$<n>損</n><br>
+清黃鐘 $82\frac{55105}{524288}$</p>
+<img src=https://pic.imgdb.cn/item/6199fc602ab3f51d9101e939.jpg width=400>
+<p>長度由長到短排列：黃鐘、大呂、太簇、夾鐘、姑洗、仲呂、蕤賓、林鐘、夷則、南呂、無射、應鐘。</p>
+<h4 id=京房六十律>京房六十律</h4>
+<p>爲了解決不能旋相爲宮的問題，京房<n>前 77—前 37 年</n>把 12 律延伸到了 60 律，算得色育第五十四的頻率比是 $1\frac{40432553845953101497907}{19342813113834066795298816}$，音分 $3.61504587$，稱爲「京房音差」。</p>
+<p>陳應時先生認爲：</p>
+<blockquote>
+<ul>
+<li>“京房六十律”没有附会“八卦”。据<v>后汉书·律历志</v>记载，京房在创制“六十律”时，是严格按照三分损益法生出来的，而不是附会八卦的产物。倘若京房眞的是附会八卦，则必然是按八卦的分卦法搞成“八八六十四律”。因有些版本的<v>前汉书</v>记写的是“分六十卦”，所以京房六十律就由此被扣上“附会六十卦”的帽子。但八卦是“太极、两仪……”等以倍数连续分卦的，故八卦中不存在“六十卦”之说。此“六十卦”者，应是“六十四卦”之误。</li>
+<li>“京房六十律”不是凑整数。京房律的第五十四律“色育”时，基本已回到了第一律的“黄钟”，他之所以又继续生了“谦待、未知……南事”等六律，陈先生认为他不是为了凑六十整数，而是要达到“自冬至始、及冬至而复”那样的“还相为宫”。这里的“宫”，不是黄钟一个音，而是黄钟至应钟七声所组成的一“均”，故“色育”之后还要再生六律，才能形成与黄钟均七律各相距“一日”的“色育均”。</li>
+<li>“京房六十律”不是宣传迷信的工具。陈先生指出，“京房六十律”的每一律或代表一天，或代表五天、六天、七天等，并不是拥护律历相通的迷信。经音分计算可知，京房所命名的“一日”，正是我们今天所说的“京氏音差”<n>3.615音分</n>。若将十二律部之间的天数相加，则可以依次得出31天、30天，31天、30天……。这也正是今天三分损益十二律中“大半音”、“小半音”的最好解释。</li>
+</ul>
+</blockquote>
+<h4 id=錢樂之三百六十律>錢樂之三百六十律</h4>
+<p>錢樂之<n>約 445 年</n>算到了第 360 箇，頻率比是 $1\frac{2060690258392248843304477540277082812788834594155180613917026572029891923938119300378593263340370864556746297173442590623570356295738742074634926562078835993228279321355}{1932268761508629172347675945465993672149463664853217499328617625725759571144780212268096883290961288981231808015751088588682539330521493827871454336733540374348490407411712}$，分母達到了 172 位之巨，音分是 $1.84531067$，已經相當接近了，但是沒有任何實用意義。<n>這箇數字是我用電腦算的，京房錢樂之當時肯定不會算那麼精確。</n></p>
+<h2 id=五限純律七限純律>五限純律　七限純律</h2>
+<h3 id=五限純律>五限純律</h3>
+<p>用純五度 $\frac{3}{2}$、正大三度 $\frac{5}{4}$、正小三度 $\frac{6}{5}$ 三種音程關係生律的純律，稱<u>五限純律</u>或<u>五限調音</u> 5-limit just intonation, 5-limit tuning，也是一般所說的<u>純律</u>。畢氏調音的大三度 $\frac{81}{64}$、小三度 $\frac{32}{27}$ 是不協和的，這妨礙了音樂家使用三和弦。中世紀後期，音樂家意識到可以略微調節某些音的音高，來達成協和。例如，将 E 減少一箇合音差 $\frac{81}{80}$，減爲 $\frac{80}{64} = \frac{5}{4}$，則 C—E 和 E—G 就可變爲正音程。五限純律的不足之處在於，2-<span class=dnline1>6</span> 的五度並不和諧，是窄五度 $\frac{40}{27}$。</p>
+<h4 id=音系網>音系網</h4>
+<p>五限純律按照大三和弦生律，當構成大三和弦 C-E-G、F-A-C、G-B-D 時，用五限純律最和諧<n>小三度 + 大三度 = 純五度，純五度 + 大三度 = 大七度</n>。</p>
+<p>用這種方法一直生律，將純五放在本行，大三放在上方，小三放在下方，就能構成純律音系網。右上比左下高大三度，右下比左上高小三度，下一行的同名律比上一行高一箇合音差，右方比左方高純五度。</p>
+<p><img src=https://pic.imgdb.cn/item/61a6e4682ab3f51d91819237.jpg alt></p>
+<p>需要注意的是，一箇音階選取不同的音時，各音需要在圖中有所連結。</p>
+<h4 id=半音與全音-1>半音與全音</h4>
+<ul>
+<li><u>合音差</u>、<u>普通音差</u> ＝ $\frac{81}{80}, 21.5¢$。加下劃線表示比五度律同名音低一箇合音差，兩箇下劃線表示低兩箇合音差，上畫線則是高一或兩箇合音差</li>
+<li>升降差 diesis = 大半音﹣小半音 = 3 個正大三度與纯八度之差 = $\frac{128}{125}, 41.059$</li>
+<li>大升降差 major diesis = 4 個正小三度與純八度之差 = $\frac{648}{625}, 62.565¢$</li>
+<li>小半音 = 正大三度 - 正小三度 = $\frac{25}{24}, 71¢$</li>
+<li>大半音 = 純四度 - 正大三度 = $\frac{16}{15}, 112¢$</li>
+<li>純律小全音 = 小半音 + 大半音 = 正大三度 - 大全音 = $\frac{10}{9}, 182¢$</li>
+<li>大全音同五度律</li>
+</ul>
+<p>C 大調中，C—D 的兩箇半音我們選 ♯<span class=dnline2>C</span> 和 ♭<span class=upline1>D</span>，爲何選這兩箇而不選 ♯<span class=dnline1>C</span> 和 ♭<span class=upline2>D</span>呢？一箇訣竅：在音系圖上找連接次數最少的。可以算出 C—♯<span class=dnline2>C</span> 頻率比 25/24、71 音分<n>純律小半音</n>，♭<span class=upline1>D</span> 頻率比 16/15，112 音分<n>純律大半音</n>。</p>
+<p>例如：<strong>D</strong> 小半音 <strong>♯<span class=dnline2>D</span></strong> 升降差 <strong>♭<span class=upline2>E</span></strong> 小半音 <strong><span class=dnline1>E</span></strong> 。純律 1—2 爲大全音，2—<span class=dnline1>3</span> 爲小全音；1—5 純五度，2—<span class=dnline1>6</span> 窄五度；<span class=dnline1>3</span>—<span class=dnline1>6</span> 純四度，<span class=dnline1>6</span>—2 寬四度。</p>
+<h4 id=音階-1>音階</h4>
+<p>扎利諾 Gioseffo Zarlino 在 16 世紀晚期創造了第一箇七音純律自然音階，其中包括完美五度、正大三度和正小三度。純律大音階 <span class=dnline1>E</span>、 <span class=dnline1>A</span>、 <span class=dnline1>B</span> 都比五度律低一箇合音差。</p>
+<img src=https://pic.imgdb.cn/item/5d4a8b1e451253d178cb3e9d.jpg alt=text width=500>
+<table>
+<thead>
+<tr>
+<th>音名</th>
+<th>C</th>
+<th>D</th>
+<th><span class=dnline1>E</span></th>
+<th>F</th>
+<th>G</th>
+<th><span class=dnline1>A</span></th>
+<th><span class=dnline1>B</span></th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>頻率比</strong></td>
+<td>1</td>
+<td>9/8</td>
+<td>5/4</td>
+<td>4/3</td>
+<td>3/2</td>
+<td>5/3</td>
+<td>15/8</td>
+<td>2/1</td>
+</tr>
+<tr>
+<td><strong>音分</strong></td>
+<td>0</td>
+<td>204</td>
+<td>386</td>
+<td>498</td>
+<td>702</td>
+<td>884</td>
+<td>1088</td>
+<td>1200</td>
+</tr>
+<tr>
+<td><strong>相鄰音程</strong></td>
+<td></td>
+<td>大全音</td>
+<td>小全音</td>
+<td>大半音</td>
+<td>大全音</td>
+<td>小全音</td>
+<td>大全音</td>
+<td>大半音</td>
+</tr>
+</tbody>
+</table>
+<p>純律自然小音階在五度律純五度基礎上加入正小三度而成。純律小音階 <span class=upline1>E</span>、<span class=upline1>A</span>、<span class=upline1>B</span> 都比五度律高一箇合音差。</p>
+<img src=https://pic.imgdb.cn/item/5d4a8b3e451253d178cb446d.jpg alt=text width=550>
+<table>
+<thead>
+<tr>
+<th>音名</th>
+<th>C</th>
+<th>D</th>
+<th>♭<span class=upline1>E</span></th>
+<th>F</th>
+<th>G</th>
+<th>♭<span class=upline1>A</span></th>
+<th>♭<span class=upline1>B</span></th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>頻率比</strong></td>
+<td>1</td>
+<td>9/8</td>
+<td>6/5</td>
+<td>4/3</td>
+<td>3/2</td>
+<td>8/5</td>
+<td>9/5</td>
+<td>2/1</td>
+</tr>
+<tr>
+<td><strong>音分</strong></td>
+<td>0</td>
+<td>204</td>
+<td>316</td>
+<td>498</td>
+<td>702</td>
+<td>814</td>
+<td>1018</td>
+<td>1200</td>
+</tr>
+<tr>
+<td><strong>相鄰音程</strong></td>
+<td>一度</td>
+<td>大全音</td>
+<td>大半音</td>
+<td>小全音</td>
+<td>大全音</td>
+<td>大半音</td>
+<td>大全音</td>
+<td>小全音</td>
+</tr>
+</tbody>
+</table>
+<h4 id=性能>性能</h4>
+<p>在五限純律對稱音階中，2 和 ♭7 互爲轉位，非對稱音階則不能轉位。五限非對稱系統有 9 箇完美五度、8 箇正大三度、6 箇正小三度，以及 2 箇不純五度 D—A $\frac{40}{27}$、3 箇不純小三度 D—F $\frac{32}{27}$，這使得它只能在狹窄的調性內轉調。非對稱有 14 箇狼音程，而對稱只有 12 箇。而七限純律除了有五限純律的這些音階外，還有一箇非對稱音階。表格空白表示同前。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>五限</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>七限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>對稱一</td>
+<td>對稱二</td>
+<td>非對稱一</td>
+<td>非對稱二</td>
+<td>非對稱三</td>
+<td>非對稱</td>
+</tr>
+<tr>
+<td>①</td>
+<td>♭2</td>
+<td>16/15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>15/14</strong></td>
+</tr>
+<tr>
+<td>②</td>
+<td>2</td>
+<td><u>9/8</u></td>
+<td><u>10/9</u></td>
+<td><strong>9/8</strong></td>
+<td><strong>9/8</strong></td>
+<td><strong>10/9</strong></td>
+<td>9/8</td>
+</tr>
+<tr>
+<td></td>
+<td>𝄫3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>8/7</td>
+</tr>
+<tr>
+<td>③</td>
+<td>♭3</td>
+<td>6/5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>④</td>
+<td>3</td>
+<td>5/4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>4</td>
+<td>4/3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>♯4</td>
+<td>45/32</td>
+<td></td>
+<td></td>
+<td>25/18</td>
+<td></td>
+<td><u>7/5</u></td>
+</tr>
+<tr>
+<td></td>
+<td>♭5</td>
+<td>64/45</td>
+<td></td>
+<td></td>
+<td>36/25</td>
+<td></td>
+<td><u>10/7</u></td>
+</tr>
+<tr>
+<td>⑦</td>
+<td>5</td>
+<td>3/2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>⑧</td>
+<td>♭6</td>
+<td>8/5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>⑨</td>
+<td>6</td>
+<td>5/3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>♯6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>7/4</td>
+</tr>
+<tr>
+<td>⑩</td>
+<td>♭7</td>
+<td><u>16/9</u></td>
+<td><u>9/5</u></td>
+<td><strong>9/5</strong></td>
+<td><strong>9/5</strong></td>
+<td><strong>16/9</strong></td>
+<td>16/9</td>
+</tr>
+<tr>
+<td>⑪</td>
+<td>7</td>
+<td>15/8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=七限純律>七限純律</h3>
+<p>七限純律與五限純律有 $\frac{225}{224}, 7.71¢$ 音差，叫<u>七限音差</u>或<u>奇觀差</u> Septimal kleisma, marvel comma，我簡稱<u>限差</u>。有降號的音，七限比五限高一限差；升號比五限低一限差。下爲音系網，獨家製作。黑色是五限純律音系網，紅綠色是七限純律。讀者可以腦補成一幅三維圖像，綠色表示比五限低一個限差，在黑色後面；紅色表示比五限高一個限差，在黑色前面。其他規則與五限圖相同，向右爲純五度，向右上爲正大三度，向右下爲正小三度。</p>
+<p><img src=https://pic.imgdb.cn/item/61ac49422ab3f51d91d48e4a.png alt></p>
+<p>總的來說，七限的七聲與五限完全相同，不同之處在於有升降號的音，具體見音程表。綠色部分的節點是 $\frac{7}{5}$ ，紅色部分節點是 $\frac{5}{7}$，其他音都是從這 2 個節點中生出的。</p>
+<p>七限有如下音比五限數字更簡單、更協和：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>♯2</th>
+<th>♯3</th>
+<th>♭4</th>
+<th>♯4</th>
+<th>♭5</th>
+<th>♯5</th>
+<th>♯6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>七限</strong></td>
+<td>7/6</td>
+<td>21/16</td>
+<td>9/7</td>
+<td>7/5</td>
+<td>10/7</td>
+<td>14/9</td>
+<td>7/4</td>
+</tr>
+<tr>
+<td><strong>五限</strong></td>
+<td>75/64</td>
+<td>675/512</td>
+<td>32/45</td>
+<td>45/32</td>
+<td>64/45</td>
+<td>25/16</td>
+<td>225/128</td>
+</tr>
+</tbody>
+</table>
+<h2 id=調律>調律</h2>
+<p>在越來越豐富的音樂應用中，五度律和純律往往限制了作曲家的表達，因此需要在這兩種律制中進行調和，產生新的律制，最廣為熟知的就是中庸全音律。</p>
+<p>需要說明的是，<u>平均律</u> equal temperament 最好翻譯爲<u>等程律</u>，<u>中庸全音律</u> meantone 最好翻譯爲<u>平均律</u>，畢竟從英語來看，mean 指平均，equal 指相等。但爲了避免和現在所說的平均律混淆，我們借用陳長林先生的名詞，將 meantone 譯爲<u>折中律</u>，或者<u>調和律</u>。之所以叫中庸全音律，是因爲全音在純律大小全音之間。</p>
+<h3 id=折中律中庸全音律>折中律　中庸全音律</h3>
+<p><u>四分之一音差折中律</u>是折中律的代表，把 4 個純五疊加，變為正大三 5/4。16 世紀以後， 三和弦使用變多。五度律的 3 是 1 上生 <strong>4 次</strong>的 $\frac{81}{64}$，不如 $\frac{5}{4}$ 和諧，爲了解決這箇問題，每生一次，減少合音差的 $\frac{1}{4}$，這樣生 4 次就能得到 $\frac{5}{4}$。列出方程 $\frac{5}{4} = \frac{x^4}{4}$<n>除以 4 是爲了歸到一箇八度內</n>，解得 $x = \sqrt[4]{5} ≒ 1.495349$，卽四分律的純五度頻率比，不如完美五度和諧，但生 4 次後能得到完全和諧的大三度。還有下生純四度，五度律 ♭A 是下生 4 次的 $\frac{128}{81}$，不如純律小六度 $\frac{8}{5}$ 和諧，於是每生一次增加 $\frac{1}{4}$ 音差。列出方程 $\frac{8}{5} = \frac{x^4}{2}$，解得 $x = \sqrt[4]{\frac{16}{5}} ≒ 1.337481$，卽純四度頻率比。之所以利用小六度解下生方程，因爲小六是大三的轉位，正如純四是純五的轉位。四分律利用上升純五和下生純四各 12 次來生律。四分律上生 9 次的♯D 270¢—下生 2 次的♭B 1007¢ 相距 737¢，構成狼音程 wolf interval，距離純律的 702¢ 非常遠。</p>
+<p><img src=https://pic.imgdb.cn/item/61a79c682ab3f51d91fb0a1f.png alt></p>
+<p><u>三分之一音差折中律</u>是另一種典型的折中律，把 3 個純四疊加，變為正小三度 $\frac{6}{5}$。畢氏小三度是下生 <strong>3 次</strong>的 $\frac{32}{27}$，不如正小三度和諧，爲了實現和諧的小三和弦，每生一次，減少合音差的 $\frac{1}{3}$。列出方程 $\frac{6}{5} = \frac{x^3}{2}$<n>除以 2 是爲了歸到一箇八度內</n>，解得 $x = \sqrt[3]{\frac{12}{5}} ≒ 1.338866$，卽純四度頻率比，不如純律的 $\frac{4}{3}$ 和諧，但能得到完全和諧的小三度。從音程表可見，三分折中律和十九等程律的每箇音都相當接近，直接純四度下生 19 次就得到整箇音階。音程名我還不確定，暫時照搬十九等程律，希望我沒想錯，應該不需要上下各生 12 次。</p>
+<p><img src=https://pic.imgdb.cn/item/61a79c682ab3f51d91fb0a26.png alt></p>
+<h3 id=新律>新律</h3>
+<p>何承天<n>造<v>元嘉曆</v>者</n>造<u>新律</u>：</p>
+<blockquote>
+<p>律呂相生，皆三分而損益之。先儒推十二律，從子至亥，每三之，凡十七萬七千一百四十七，而三約之，是爲上生。故漢志云：三分損一，下生林鍾，三分益一，上生太蔟。無射既上生中呂，則中呂又當上生黃鍾，然後五聲、六律、十二管還相爲宮。今上生不及黃鍾實二千三百八十四，九約實一千九百六十八爲一分，此則不周九寸之律一分有奇，豈得還爲宮乎？</p>
+</blockquote>
+<p>三分損益法本來是這樣的：</p>
+<p><img src=https://pic.imgdb.cn/item/61a82cb62ab3f51d914b2b35.png alt></p>
+<img src=https://pic.imgdb.cn/item/61a82cea2ab3f51d914b543a.png width=820>
+<p>何承天將黃鐘長度定爲 177147 這一最小公倍數，到了八度黃鐘，弦長少了 $2384\frac{1}{3}$，黃鐘九寸，一分 = 1968，則相差一分多。於是他將 $2384\frac{1}{3}$ 等分爲 12 份，每律加上一份，可得：</p>
+<p><img src=https://pic.imgdb.cn/item/61a835182ab3f51d9152a7f2.png alt></p>
+<p><img src=https://pic.imgdb.cn/item/61a835182ab3f51d9152a7f7.png alt></p>
+<p>下爲新律 12 律音分：<code>100.734 200.407 302.786 401.588 505.41 603.416 700.642 805.782 902.362 1008.593 1104.583 0</code>，可與十二等程律比較一下。但是新律只是<b>表面上實現了黃鐘還原</b>，並不能眞正自由旋宮，這也提示我們，在傳統三分損益法基礎上加以調整，並不是新律制的出路。</p>
+<p>他又說：</p>
+<blockquote>
+<p>凡三分益一爲上生，三分損一爲下生，此其大略，猶周天斗分四分之一耳。京房不思此意，比十二律微有所增，方引而伸之，中呂上生執始，執始下生去滅，至於南事，爲六十律，竟復不合，彌益其疏。班氏所志，未能通律呂本源，徒訓角爲觸，徵爲祉，陽氣施種於黃鍾，如斯之屬，空煩其文，而爲辭費。又推九六，欲符劉歆三統之數，假託非類，以飾其說，皆孟堅之妄矣。</p>
+</blockquote>
+<p>可見何承天並不喜歡像一般學者那樣，將音律與其他系統牽合起來。<b>在何承天的思考方式中，三分損益一只是舉約數而言，是古人的模糊化表述</b>，正如都說週天度是 $365\frac{1}{4}$ 度，而<v>元嘉曆</v>實際上是 $365\frac{75}{304} ≒ 365.24671$ 度。何承天認爲只有自己發現了自古相承的三分損益法的眞諦，京房、班固等人都只是南轅北轍，徒費功夫。這一隱藏的思想脈絡似乎未引起音樂史研究者的關注。</p>
+<h3 id=三五調和律>三五調和律</h3>
+<p>三五調和律是陳長林先生提出的用於解決泛音同音不同高問題的琴律，有兩種。何承天新律調和的是五度律系統內部旋相爲宮的問題，而中全律、三五調和律解決的是五度律和純律之間的問題。大意爲，在三分損益基礎上，將合音差平分爲 4 份，每份 5¢。三五調和律沒有標準的品弦法，是在準法品弦法基礎上，靠聽覺來調得稍微低一些。</p>
+<h2 id=等程律>等程律</h2>
+<p>在折中律上更進一步，將一箇八度的每箇音等分，就是等程律，等程律當然也是調律。十二等程律是現在通行的律制。說到等程律，經常提及的兩部著作是萬曆十二年 1584 朱載堉<v>律呂精義</v>、1585 西蒙·史蒂文 Simon Stevin，朱載堉提供了精確的計算方法，而西蒙的方法不太精確，兩者是獨立發生的。</p>
+<blockquote>
+<p>几个世纪以来，欧洲使用了各种各样的调音系统，包括十二等程律 12-TET，以及平均律律 meantone temperament 和优律 well temperament。最后，十二等程律胜出，这使得对称调性 symmetrical tonality 和多调性 polytonality 的新风格得以出现，无调性音乐，如用十二音技术或序列主义创作的音乐，以及爵士乐<n>至少是它的钢琴部分</n>得以发展和繁荣。</p>
+</blockquote>
+<h3 id=十二等程律>十二等程律</h3>
+<h4 id=產生法>產生法</h4>
+<p>五度律向上生 12 次，與 C 相差最大音差 23.5 音分，現在若把每次相生的純五度都減小最大音差的 $\frac{1}{12} ≒ 2¢$，就可以回到 C 了。每次生律的頻率比爲 $\sqrt[12]{2} ≒ 1.059463$。</p>
+<h4 id=半音>半音</h4>
+<p>由於所有半音全都相等，所以等程律有異名同音現象：C=♯B 𝄫D，♯C=𝄪B ♭D，D=𝄪C 𝄫E，♯D=♭E 𝄫F，E=𝄪D ♭F，F=♯E 𝄫G，♯F=𝄪E ♭G，G=𝄪F 𝄫A，♯G=♭A，A=𝄪G 𝄫B，♯A=♭B 𝄫C，B=𝄪A ♭C。</p>
+<h4 id=音階-2>音階</h4>
+<p>自然大音階：</p>
+<table>
+<thead>
+<tr>
+<th>音名</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>音分</td>
+<td>0</td>
+<td>200</td>
+<td>400</td>
+<td>500</td>
+<td>700</td>
+<td>900</td>
+<td>1200</td>
+</tr>
+</tbody>
+</table>
+<p>自然小音階：</p>
+<table>
+<thead>
+<tr>
+<th>音名</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>音分</td>
+<td>0</td>
+<td>200</td>
+<td>300</td>
+<td>500</td>
+<td>700</td>
+<td>800</td>
+<td>1200</td>
+</tr>
+</tbody>
+</table>
+<h3 id=新法密率>新法密率</h3>
+<p>現在我們直接用電腦算 $\sqrt[12]{2}$ 就可以了，那麼朱載堉的新法密率是怎麼計算的呢？如下圖，設黃鐘正率長度爲 1 尺，黃鐘倍率爲 2 尺，依次作圓、方、圓，據勾股定理卽可得，中間方的長度爲 $\sqrt{2}$。這正是十二律中位於正中的蕤賓的長度。這是朱載堉絕頂聰明的發明，將算術與幾何聯繫起來。問題轉換成首項 2、末項 1、中項 $\sqrt{2}$、公比 $\sqrt{2}$ 的等比數列。</p>
+<p><img src=https://pic.imgdb.cn/item/61a8655c2ab3f51d9178b1c8.jpg> <img src=https://pic.imgdb.cn/item/61a255642ab3f51d91884cc0.jpg width=500></p>
+<blockquote>
+<p>造率始於黃鐘，必先求蕤賓者，猶冬夏二至也；次求夾鐘及南呂者，猶春秋二分也。始於黃鐘者，履端於始也；中於蕤賓者，舉正於中也；終於應鐘者，歸餘於終也：律與曆一道也。</p>
+</blockquote>
+<p>朱載堉有很鮮明的律曆合一的思路，此處算律將律與曆聯繫起來，而在他的<v>黃鐘曆</v>中，將曆與律聯繫起來。之所以說蕤賓猶如冬至夏至，因爲古曆的日躔表<n>太陽變速運動表</n>以二至爲起始，冬至到夏至和夏至到冬至用一張表；之所以說夾鐘南呂猶如春分秋分，因爲冬至到春分、春分到夏至，或者春分到夏至、夏至到秋分兩邊對稱。</p>
+<p>求得蕤賓後，再以蕤賓爲端點，求得 $夾鐘南呂 = \sqrt{10蕤賓}$。接著求 $應鐘 = \sqrt[3]{100南呂}$。中國古代有增乘開方術，開平方開立方都不成問題。不過增乘開方術到朱載堉的時候已經失傳，他用的其他數學方法，可以參看參考文獻。朱載堉還列出了各係數的近似展開以方便計算，例如純五度爲 $\frac{500000000}{749153538}$。</p>
+<h3 id=十九等程律>十九等程律</h3>
+<p>將一箇八度平分爲 19 份，每箇音 $\frac{1200}{19} ≒ 63.1579¢$。十九等程律與十二等程律都有各自的異名同音音，十九等程律有：♯E = ♭F、♯B = ♭C、𝄪C =♭D 等等。</p>
+<p>從音程表的誤差中可見，十九等程律提供了適應古典和聲的純五度、大小三度、大小二度及其轉位。<bc>大小三度</bc> 十九比十二更接近純律。<bc>純五度</bc> 十九沒有那麼平滑。<bc>全音</bc> 十九、十二的全音都介於純律大小全音之間，即中庸全音。<bc>半音</bc> 十九有兩種半音，聽感完全不同。② 比較協和，其轉位 ⑰ 近似十五倍泛音，是一箇穩定的大七度；① 極不協和，傾向性極強，作爲導音能夠提供強大的屬功能。<bc>三全音</bc> 十九等程律有兩種互爲轉位的大小三全音。<bc>其他</bc> ④ ⑦ ⑫ ⑮ 是古典和聲中不存在的音程，這些聲響對十二等程律耳朵是高度陌生的，但它們所近似的頻率比也都能在十五倍泛音以下找到。這說明十九等程律提供了更豐富的和聲性能，在當代音樂中意義深遠。</p>
+<h3 id=二十四等程律>二十四等程律</h3>
+<p>阿拉伯音樂家數學家 Michael Meschāqa<n>1800—1888</n>在<v>論希哈卜的音樂藝術</v>中提出二十四等程律，將各律之間分爲 50¢，以適應阿拉伯各種音階的特殊需求。阿拉伯有 17 種音階，除了全音和半音，還有 50、150、250¢的微分音。</p>
+<h2 id=規則調律理論>規則調律理論</h2>
+<p>最後一節是進階內容，跳過无妨。</p>
+<p>規則調律理論 regular temperament theory (RTT) 是對音程的數學模型化。該理論把音程理解爲一箇向量空間，利用線性代數，來選擇音高。一個調音中，通常用一個生程充當週期 period。週程 pergen 卽週期、生程的合稱。例如： 四分折中律是 2 秩調律，純八度是週期，純五度是生程，寫作 $(P8, P5)$。</p>
+<p>用狄拉克符號 $⟨ ]$ 和 $[ ⟩$ 來表示，中間的數字與從小到大排列的質數有關，前者用於某調律的定義，後者用於某音程的定義。前者例如：十二等程律是五限的，用到了 2 3 5 倍音來生程，寫作 $ ⟨12\space19\space28]$ ，它的 2/1 用 12 步生程，3/1 用 19 步，5/1 用 28 步。後者則是對頻率比分解質因數，取其指數爲向量，例如： $\frac{49}{48} = 2^{-4} × 3^{-1} × 5^0 × 7^2 = [-4\space-1\space0\space2⟩$。</p>
+<p>兩種符號可以合併計算，如：$\frac{9}{8} = 2^{-3} × 3^2 = [-3\space2\space0⟩$，那麼在十二等程律中生出 $\frac{9}{8}$ 需要幾步？直接用矩陣計算即可，$ ⟨12\space 19\space 28\mid -3\space 2\space 0⟩ = 12 × (-3) + 19 × 2 + 28 × 0 = 2$。而 $\frac{10}{9} = 2^1 × 3^{-2} × 5^1 = [1\space -2\space 1⟩$，$ ⟨12\space 19\space 28\mid 1\space -2\space 1⟩ = 2$，說明在十二等程律中 $\frac{10}{9}$ 和 $\frac{9}{8}$ 沒有區別，都是 2 步生出來，該律調和的是 $\frac{9}{8} / \frac{10}{9} = \frac{81}{80}$ 的音差。檢驗一下，$\frac{81}{80} = 2^{-4} × 3^4 × 5{-1} = [-4\space 4\space -1⟩$，而 $ ⟨12\space 19\space 28\mid -4\space 4\space -1⟩ = 0$，步數爲 0，說明就是這種調律要調和的音差。</p>
+<p>用這種規則來介紹一些音差：</p>
+<ul>
+<li>最大音差 $\frac{531441}{52488} = [-19\space12⟩$</li>
+<li>合音差 $\frac{81}{80} = [-4\space4\space-1⟩$</li>
+<li>分裂差、亥氏差 schisma，最大音差與合音差之差，1.954¢，$[-19\space12⟩ - [-4\space4\space-1⟩ = [-15\space8\space1⟩$</li>
+<li>升降差 $\frac{128}{125} = [7\space0\space-3⟩$</li>
+<li>七限差 $\frac{225}{224} = 2^{-5} × 3^2 × 5^2 × 7^{-1} = [-5\space2\space2\space-1⟩$</li>
+</ul>
+<p>等程律只用一行即可表示，其他調律需要多行。例如：四分折中律用純八、純五、正大三，映射表：
+$$
+⟨1\space1\space0]\
+⟨0\space1\space4]
+$$
+第一列：2/1 = 1 個純八度；第二列：3/1 = 1 個純八度 + 1 個純五；第三列：5/1 = 4 個純五。從左到右表示每個生程，從上到下表示該生程如何構成。</p>
+<p>为什么乐理和数学如此不同？ - 酱紫君的回答 - 知乎
+<a href=https://www.zhihu.com/question/311022596/answer/622275352>https://www.zhihu.com/question/311022596/answer/622275352</a></p>
+</article>
+<aside class="toc toc-horizontal">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#基礎知識>基礎知識</a>
+<ul>
+<li><a href=#槪念>槪念</a></li>
+<li><a href=#發音原理>發音原理</a></li>
+<li><a href=#音律計算法>音律計算法</a></li>
+<li><a href=#音程表>音程表</a></li>
+</ul>
+</li>
+<li><a href=#五度律三限純律>五度律　三限純律</a>
+<ul>
+<li><a href=#西方五度相生律>西方：五度相生律</a></li>
+<li><a href=#中國三分損益法>中國：三分損益法</a></li>
+</ul>
+</li>
+<li><a href=#五限純律七限純律>五限純律　七限純律</a>
+<ul>
+<li><a href=#五限純律>五限純律</a></li>
+<li><a href=#七限純律>七限純律</a></li>
+</ul>
+</li>
+<li><a href=#調律>調律</a>
+<ul>
+<li><a href=#折中律中庸全音律>折中律　中庸全音律</a></li>
+<li><a href=#新律>新律</a></li>
+<li><a href=#三五調和律>三五調和律</a></li>
+</ul>
+</li>
+<li><a href=#等程律>等程律</a>
+<ul>
+<li><a href=#十二等程律>十二等程律</a></li>
+<li><a href=#新法密率>新法密率</a></li>
+<li><a href=#十九等程律>十九等程律</a></li>
+<li><a href=#二十四等程律>二十四等程律</a></li>
+</ul>
+</li>
+<li><a href=#規則調律理論>規則調律理論</a></li>
+</ul>
+</nav>
+</aside>
+</div>
+</div>
+<nav>
+<div class="pagi a1">
+<a class="pagi-item pagi-prev" href=/key/1/3/>
+<span class="des-base des-des">«« 上篇</span><br>律曆初階上｜三：調學</a>
+<a class="pagi-item pagi-next" href=/key/orchid/>
+<span class="des-base des-des">下篇 »»</span><br>赫赫金鑰｜碣石調幽蘭</a>
+</div>
+</nav>
+<div class=bg1>
+<div class=comment>
+<div id=hyvor-talk-view></div>
+<script type=text/javascript>var HYVOR_TALK_WEBSITE=1727,HYVOR_TALK_CONFIG={url:"https://qin.kqh.me/key/1/1/",id:"429d00bf1b915707beb3401b3d9f8c1b"}</script>
+<script async type=text/javascript src=//talk.hyvor.com/web-api/embed></script>
+</div>
+</div>
+</main>
+<footer class=footer-wrapper>
+<div class=col-wrap>
+<nav class="footer a2">
+訂閱｜<a href=/index.xml target=_blank style=font-weight:700>RSS</a>　<a href=https://kqhnewsletter.zhubai.love target=_blank style=font-weight:700>newsletter</a>　<a href=/sitemap.xml target=_blank>sitemap</a><br>
+copyright <a href=/>琴衡</a>　2022-01-01 > 2022運營 <a href=https://me.kqh.me target=_blank>柯棋瀚</a><br>
+power <a href=https://gohugo.io target=_blank>Hugo</a>　theme <a href=https://github.com/kujihhoe/HUGO-Theme-CJK target=_blank>CJK</a>　host <a href=https://app.netlify.com/sites/kqh/deploys target=_blank>Netlify</a>
+</nav>
+</div>
+</footer>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451819-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-108451819-1')</script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js></script>
+<script type=text/javascript>docsearch({apiKey:'9b538ac6c3dacb030efa8d971bf15d1f',indexName:'kqh',inputSelector:'#algolia-autocomplete',debug:!1})</script>
+</body>
+</html>
