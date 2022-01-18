@@ -1,5 +1,5 @@
 {{ $name := "" }}
-{{ if eq .RelPermalink "/qinyi/" }}
+{{ if eq .RelPermalink "/newsletter/" }}
 {{ $name = "琴易" }}
 {{ end }}
 
@@ -12,8 +12,8 @@
       <h0 class="a1"><a href="/#net">通訊</a></h0>
     </div>
     <nav class="tab-wrap">
-      <span class='tab a1 a3 {{ if eq .RelPermalink "/qinyi/" }}active{{ end }}'><a href="/qinyi/">琴易</a></span>
-      {{ if eq .RelPermalink "/qinyi/" }}
+      <span class='tab a1 a3 {{ if eq .RelPermalink "/newsletter/" }}active{{ end }}'><a href="/newsletter/">琴易</a></span>
+      {{ if eq .RelPermalink "/newsletter/" }}
       <button class='a1 a3'><a href='https://kqhnewsletter.zhubai.love' target="_blank">訂閱</a></button>
       {{ end }}
       <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>

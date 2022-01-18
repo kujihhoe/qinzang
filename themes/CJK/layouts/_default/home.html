@@ -141,7 +141,7 @@
     <div class="u-wrap">
       <h0 id="net">通訊</h0>
       <div style="margin: 0 auto 3em;">
-        <h2> <a href="/qinyi" target="_blank">琴易</a> </h2>
+        <h2> <a href="/newsletter" target="_blank">琴易</a> </h2>
         <p class="des-taxo" style="line-height: 1.5;margin:-.5em auto .5em;">
           {{ with $des := index (site.Data.taxo ) "琴易" -}}{{- $des.des | safeHTML | markdownify -}}{{ end }}
         </p>
@@ -149,7 +149,7 @@
               target="_blank">訂閱</a></button></center>
       </div>
       <div class="discover column3" style="margin-top: -1em;">
-        {{ range first 3 (where site.RegularPages "Type" "qinyi") }}
+        {{ range first 3 (where site.RegularPages "Type" "newsletter") }}
         <div class="discover-grid">
           {{ partial "post-info-2.html" . }}
         </div>

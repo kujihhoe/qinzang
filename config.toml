@@ -83,7 +83,7 @@ url = "/database"
 [[menu.nav3]]
 name = "琴易"
 weight = 22
-url = "/qinyi"
+url = "/newsletter"
 
 [params]
 Sections3 = [
@@ -92,7 +92,7 @@ Sections3 = [
   "database",
   "key",
   "read",
-  "qinyi",
+  "newsletter",
   "qinpu"  
 ]
 

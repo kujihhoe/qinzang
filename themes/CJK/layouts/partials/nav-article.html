@@ -20,14 +20,14 @@
           href="/database/">資料</a></span>      
       <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
     </nav>
-    {{ else if eq .Page.Type "qinyi" }}
+    {{ else if eq .Page.Type "newsletter" }}
     <div>
       <h0 class="a1"><a href="/#net">通訊</a></h0>
     </div>
     <nav class="tab-wrap">
-      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "qinyi" }}active{{ end }}'><a
-          href="/qinyi/">琴易</a></span>
-      {{ if eq .Page.Type "qinyi" }}
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "newsletter" }}active{{ end }}'><a
+          href="/newsletter/">琴易</a></span>
+      {{ if eq .Page.Type "newsletter" }}
       <button class='a1 a3'><a href='https://kqhnewsletter.zhubai.love' target="_blank">訂閱</a></button>
       {{ end }}
      </nav>

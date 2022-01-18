@@ -1,21 +1,10 @@
 {{ define "main" }}
-<div class='{{ if eq .Page.Type "newsletter" "plus" "zanfu" }}bggray{{ end }}'>
+<div>
     {{ partial "heading.html" . }}
 </div>
-<main {{- if eq .Page.Type "newsletter" "plus" "zanfu" }} class="bggray" {{- end -}}>
-    {{ if ne .Page.Type "newsletter" "plus" "zanfu" }}
+<main>
     {{ partial "content.html" . }}
     {{ partial "prevnext.html" . }}
-    {{ else }}
-    {{ partial "content-plus.html" . }}
-    {{ end }}
-
-    {{ if eq .Page.Type "post" }}
-    {{ partial "recommendation.html" . }}
-    {{ end }}
-
-    {{ if ne .Page.Type "newsletter" "plus" "zanfu" }}
     {{ partial "comments.html" . }}
-    {{ end }}
 </main>
 {{ end }}

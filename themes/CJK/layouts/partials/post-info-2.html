@@ -2,15 +2,10 @@
 <div class="post-card" style="background-image: url({{ .Params.img }})"></div>
 {{ end }}
 <div class="discover-grid a1">
-  <span class="des-base des-des"><time>{{- .Date.Format "2006-01-02" }}</time>{{ if ne .Date .Lastmod }} >{{
-    .Lastmod.Format "06-01-02" -}}{{ end }}</span>
+  <span class="des-base des-des"><time>{{- .Date.Format "2006-01-02" }}</time>{{ if ne .Date .Lastmod }} >{{ .Lastmod.Format "06-01-02" -}}{{ end }}</span>
   {{ if .Params.num }}<span class="des-base newsletter-num blue">#{{ .Params.num }}</span>{{ end }}
   <div class="discover-item">
-    <a href='{{ if eq .Page.Type "newsletter" }}  
-    https://papyrus.so/@kqh/news-{{- .Params.num -}}
-    {{ else }}
-    {{- .Permalink -}}
-    {{ end }}' target="_blank">{{- .Title | safeHTML | markdownify -}}</a>
+    <a href='{{ .Permalink }}' target="_blank">{{- .Title | safeHTML | markdownify -}}</a>
   </div>
   <div class="des-base des-des">{{ .Params.description | safeHTML | markdownify }}</div>
 </div>
