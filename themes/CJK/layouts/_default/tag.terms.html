@@ -1,0 +1,34 @@
+{{ define "main" }}
+<main>
+  <div class="u-wrap">
+    <h1>標籤<sup class="tagcloud-sup">{{ len site.Taxonomies.tag }}</sup></h1>
+    <div class="tagcloud a1 a3">
+      <!-- https://mertbakir.gitlab.io/hugo/tag-cloud-in-hugo/ -->
+      {{ $largestFontSize := 2.8 }}
+      {{ $smallestFontSize := 1 }}
+      {{ $smallestOpacity := 0.25 }}
+      {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+      {{ $max := add (len (index site.Taxonomies.tag.ByCount 0).Pages) 1 }}
+      {{ $min := len (index site.Taxonomies.tag.ByCount.Reverse 0).Pages }}
+      {{ $fontStep := div $fontSpread (sub $max $min) }}
+      {{ range $name, $taxonomy := site.Taxonomies.tag }}
+      {{ $tagCount := len $taxonomy.Pages }}
+      {{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+      {{ $currentFontSize := add $smallestFontSize (mul $fontSpread $weigth) }}
+      {{ $opacity := add $smallestOpacity (mul (sub 1 $smallestOpacity) $weigth) }}
+      <div>
+        <a href='/tag/{{ $name | urlize }}' class="tagcloud-item"
+          style="font-size:{{ $currentFontSize }}rem;opacity:{{ $opacity }};">{{- $name -}}
+          <sup class="tagcloud-sup">{{- $tagCount -}}</sup></a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</main>
+<!-- max=現在最多標籤的文章數 47+1，min=最少1；tagCount=該標籤文章數
+  max 最多標籤的文章數 fontstep = 2.0 / 48
+  math.Log means ln()
+  weigth=(ln(tagCount)-ln(1)) / (ln(48)-ln(1))
+  currentFontSize=1.0+ 2.0*weigh
+-->
+{{ end }}

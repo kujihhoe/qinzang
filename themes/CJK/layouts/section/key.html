@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="u-wrap">
+    {{ partial "nav-wiki.html" . }}
+</div>
+{{ with site.Taxonomies.tutokind.律曆初階 }}
+{{ $count4 := 0 }}{{ range .Pages }}{{ $count4 = add $count4 .WordCount }}{{ end }}
+{{ $length := len .Pages }}
+<main>
+    <div class="u-wrap">
+        <div class="discover-wrap">
+            <div class="newsletter-wrap" style="margin-top: -5em;">
+                <div class="newsletter-grid a1">
+                    <div>
+                        <span class="des-base newsletter-time"><time>2021-12-03 v1.2</time></span>
+                        <div class="discover-item newsletter-title">{{ .Page.Title }}</div>
+                        <div class="des-taxo newsletter-des">
+                            律曆向稱絕學，之所以覺得難，一方面，這是技術性的知識，是多數古代學者和現在的文史學者不太擅長的；另一方面，中國古代的學術體系跟西方相比有很大區別，精通現代天文學和樂理的人不一定看得懂中國古代的文獻；更重要的是，樂學的文獻大多已經泯滅於歷史中了，現在只能通過吉光片羽來鉤沈索隱，不過相比之下曆法的材料就保存得非常完整了。這本小冊子是一把鑰匙，幫助我打開了律曆之學的大門，現在我也希望把鑰匙交給讀者
+                        </div>
+                        <div class="des-base tl">凡 {{ $length }} 篇　{{- $count4 }} 字　篇均 {{ div $count4 $length }} 字</div>
+                    </div>
+                    <div>
+                        <div class="newsletter-cover"
+                            style="background-image: url('https://pic.imgdb.cn/item/6198b0202ab3f51d917440f6.png')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ partial "archive-wiki-sub.html" . }}
+        </div>
+    </div>
+</main>
+{{ end }}
+{{ end }}

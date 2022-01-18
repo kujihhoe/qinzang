@@ -1,6 +1,6 @@
 baseURL = "https://qin.kqh.me/"
 languageCode = "zh"
-title = "赫赫琴藏"
+title = "琴衡"
 enableRobotsTXT = true
 theme = "CJK"
 disablePathToLower = true
@@ -37,9 +37,13 @@ author = "author"
 tag = "tag"
 category = "category"
 toc = "toc"
+series = "series"
+note = "note"
+tutokind = "tutokind"
+book = "book"
 
 [author] # essential
-name = "赫赫琴藏"
+name = "琴衡"
 
 [sitemap] # essential
 changefreq = "weekly"
@@ -47,20 +51,56 @@ priority = 0.5
 filename = "sitemap.xml"
 
 [[menu.nav]]
-name = "主頁"
+name = "琴衡"
 weight = 1
 url = "/"
 
+[[menu.nav1]]
+name = "論說"
+weight = 13
+url = "/post"
+
+[[menu.nav1]]
+name = "散記"
+weight = 14
+url = "/diary"
+
+[[menu.nav2]]
+name = "讀書"
+weight = 31
+url = "/read"
+
+[[menu.nav2]]
+name = "教程"
+weight = 32
+url = "/key"
+
+[[menu.nav2]]
+name = "資料"
+weight = 33
+url = "/database"
+
+[[menu.nav3]]
+name = "琴易"
+weight = 22
+url = "/qinyi"
+
 [params]
-Sections1 = [
+Sections3 = [
   "post",
-  "qinpu"
+  "diary",
+  "database",
+  "key",
+  "read",
+  "qinyi",
+  "qinpu"  
 ]
-contentCopyright = ''
+
+copyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>，非商業用途可隨意使用'
 vertical = true
 summaries = false # Set to true to show summaries of posts on homepage
 divider = false #\a0 Set to false to remove divider below posts on homepage
 schema = false # Set to true to add Schema.org metadata
 opengraph = false # Set to true to add Open Graph metadata
 twittercards = false # Set to true to add Twitter Cards metadata
-repository = "https://github.com/kujihhoe/ChunqiuXuekan/blob/master/content/"
+repository = "https://github.com/kujihhoe/Qinzang/blob/master/content/"

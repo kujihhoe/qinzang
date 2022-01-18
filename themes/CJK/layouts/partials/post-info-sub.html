@@ -2,9 +2,10 @@
   <span class="des-base des-des">
     <time>{{ .Date.Format "2006-01-02" }}</time>
     {{ if ne .Date .Lastmod }} >{{- .Lastmod.Format "06-01-02" }}{{ end }}
+    {{ if .Params.num }}<span class="des-base newsletter-num blue">#{{ .Params.num }}</span>{{ end }}
+    {{ if .Params.step }}<span class="des-base newsletter-num">{{ .Params.step }}</span>{{ end }}
   </span>　
-  <div class="discover-item"><a href="{{ .Permalink }}" class="archive-post-link" target="_blank">{{- .Title | safeHTML
-      | markdownify -}}</a></div>
+  <div class="discover-item"><a href="{{ .Permalink }}" class="archive-post-link" target="_blank">{{- .Title | safeHTML | markdownify -}}</a></div>
   <span class="des-base">{{ .Params.description | safeHTML | markdownify }}</span>
   <div class="des-base des-des des-tag a1">
     {{- with .Params.author -}}
@@ -17,15 +18,7 @@
     {{- end -}}
     {{- end -}}
     {{- end -}}
-    {{- with .Params.auth -}}
-    {{- range . -}}
-    {{- $name := . -}}
-    {{- with site.GetPage "term" (printf "auth/%s" $name) | default (site.GetPage "term" (printf "auth/%s"
-    ($name | urlize))) -}}
-    <a href="/auth/{{ $name }}">@{{- $name -}}</a>
-    {{- end -}}
-    {{- end -}}
-    {{- end -}}
+
     {{- with .Params.category -}}
     {{- range . -}}
     {{- $name := . -}}
@@ -73,23 +66,5 @@
     {{- end -}}
     {{- end -}}
     {{- end -}}
-    {{- with .Params.subject -}}
-    {{- range . -}}
-    {{- $name := . -}}
-    {{- with site.GetPage "term" (printf "subject/%s" $name) | default (site.GetPage "term" (printf "subject/%s"
-    ($name | urlize))) -}}
-    <a href="/subject/{{ $name }}" target="_blank">#{{- $name -}}</a>
-    {{ end -}}
-    {{ end }}
-    {{- end }}
-    {{- with .Params.from -}}
-    {{- range . -}}
-    {{- $name := . -}}
-    {{- with site.GetPage "term" (printf "from/%s" $name) | default (site.GetPage "term" (printf "from/%s" ($name |
-    urlize))) -}}
-    <a href="/from/{{ $name }}" target="_blank">«{{- $name -}}</a>
-    {{ end -}}
-    {{ end }}
-    {{- end }}
   </div>
 </div>

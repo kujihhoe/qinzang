@@ -1,19 +1,54 @@
-{{ partialCached "banner.html" . }}
-<header class="Heading">
-  {{ if .Params.img }}
+{{ if ne .Page.Type "newsletter" "plus" "zanfu" }}
+{{ if .Params.img }}
+<div class="bgshallowblack" style="color: var(--bggray);margin-top: -2em;margin-bottom: -3em;">
+  <div class="u-wrap">
+    {{ partial "nav-article.html" . }}
+  </div>
+</div>
+<div class="bgshallowblack" style="max-height: 70vh;margin-bottom: 22vh;">
   <div class="article-cover" style="background-image: url({{ .Params.img }})">
-    <div>
+    <div class="article-cover-title">
       <h1 class="DocSearch-lvl1">
+        {{ if eq .Page.Type "qinyi" }}琴易#{{ .Params.num }} 
+        {{ else if eq .Page.Type "nethistory" }}史網#{{ .Params.num }} 
+        {{ end }}
         {{- .Title | safeHTML | markdownify -}}
       </h1>
       <div class="des-taxo black">{{ .Params.Description | safeHTML | markdownify }}</div>
     </div>
   </div>
-  {{ else }}
+</div>
+
+{{ else }}
+
+<div class="u-wrap">
+  {{ partial "nav-article.html" . }}
   <div>
     <h1 class="DocSearch-lvl1">{{- .Title | safeHTML | markdownify -}}
     </h1>
     <div class="des-taxo">{{ .Params.Description | safeHTML | markdownify }}</div>
   </div>
   {{ end }}
-</header>
+</div>
+{{ else }}
+<div class="u-wrap">
+  {{ partial "nav-article.html" . }}
+  <div class="newsletter-wrap">
+    <div class="newsletter-grid a1">
+      <div class="newsletter-left">
+        <span class="des-base newsletter-time"><time>{{- .Date.Format "2006-01-02" }}</time>{{ if ne .Date .Lastmod }}
+          >{{- .Lastmod.Format "06-01-02" -}}{{ end }}</span>
+        <span class="des-base newsletter-time newsletter-num">#{{ .Params.num }}</span>
+        <div class="discover-item newsletter-title">{{- .Title | safeHTML | markdownify -}}</div>
+        <span class="des-base newsletter-des">{{ .Params.description | safeHTML | markdownify }}</span>
+        <br>
+        <br>
+        <span class="des-base">{{- .WordCount }} 字 ● 本文僅限訂閱者閱讀</span>
+      </div>
+      <div class="newsletter-right">
+        <div class="newsletter-cover" style="background-image: url({{ .Params.img }})"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

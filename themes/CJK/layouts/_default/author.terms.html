@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main>
+  <section class="u-wrap a1">
+    <h1>可愛的作者</h1>
+    <div class="discover column2">
+      {{ range .Data.Terms.ByCount }}
+      {{ $name := .Page.Title }}
+      {{ if ne $name "査阜西" "瑚璉琴社" "竹迫忍" "絲桐神品" }}
+      {{ $count := .Count }}
+      <div>
+        <div class="columnist-wrap">
+          <div>
+            {{- with $icon := index site.Data.icon .Page.Title -}}
+            {{ if $icon.icon }}
+            <span class="icon" style="background-image: url({{ $icon.icon }})"></span>
+            {{ end }}
+          </div>
+          <div>
+            <div class="a1" style="font-size: 1.5em;font-weight: bold;">
+              <a href="/author/{{ $name }}">{{ $name }}</a>
+              <sup class="tag-count"> {{ $count }}</sup>
+              <span class="des-base author-mail">{{ $icon.mail }}</span>
+            </div>
+            <p class="des-base black">{{ $icon.description }}</p>
+            {{- end -}}
+            <ul>
+              {{ range first 3 .Pages }}
+              <li><a href="{{ .RelPermalink }}">{{ .Page.Title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+    <center><button class="a3"><a href="/about" target="_blank">誠邀作者</a></button></center>
+  </section>
+</main>
+{{ end }}

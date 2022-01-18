@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main>
+  <div class="u-wrap">
+    <div class="columnist-wrap" style="margin: 3em auto 2em;">
+      {{ $name := .Page.Title }}
+      {{- with $icon := index site.Data.icon $name -}}
+      <div>
+        {{ if $icon.icon }}<span class="icon" style="background-image: url({{ $icon.icon }})"></span>{{ end }}
+      </div>
+      <div>
+        <div style="font-size: 1.5em;font-weight: bold;">
+          <n class="a1" style="font-size: .65em; font-family: var(--sans); padding-left: 0;"><a href="/author">作者</a></n>{{ $name }}<span
+            class="des-base author-mail">{{ $icon.mail }} <a class="rss3" href="{{- .Permalink -}}index.xml"
+              target="_blank"><span class="rss1">{{- $name -}}</span><span class="rss2">RSS</span></a></span>
+        </div>
+        <p class="des-base black">{{ $icon.description }}</p>
+        {{- end -}}
+        <p class="des-base" style="font-size: .8em;">
+          {{- $length := len .Data.Pages }}
+          {{ $count := 0 }}{{ range .Pages }}{{ $count = add $count .WordCount }}{{ end }}
+          凡 {{ $length }} 篇　{{- $count }} 字　篇均 {{ div $count $length }} 字　{{- with .Data.Pages.GroupByDate "2006" -}}橫跨
+          {{ len . }} 年{{- end -}} 　
+        </p>
+      </div>
+    </div>
+    {{ partial "archive.html" . }}
+  </div>
+</main>
+{{ end }}

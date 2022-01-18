@@ -1,0 +1,41 @@
+{{ $related := site.RegularPages.Related . }}
+{{ $len := len $related }}
+{{ $related1 := $related | first 7 }}
+{{ $related2 := $related | first 11 | complement $related1 }}
+{{ $related3 := $related | first 20 | complement $related1 $related2 }}
+{{ $a := 4 }}
+{{ $b := 0 }}
+{{ $c := 0 }}
+<nav class="section bg1">
+  <div class="u-wrap">
+    <div class="discover
+    {{ if le $len 6 }}
+    {{ $a = 3 }}
+    column3
+    {{ else if le $len 9 }}
+    {{ else if le $len 13 }}
+    {{ $b = 2 }}
+    column3
+    {{ else }}
+    {{ $b = 2 }}
+    {{ $c = 2 }}
+    {{ end }}
+    a1" style="margin: 2em auto 0;">
+      {{ with $related1 | shuffle }}
+      {{ range first $a . }}
+      {{ partial "recommendation-sub.html" . }}
+      {{ end }}
+      {{ end }}
+      {{ with $related2 | shuffle }}
+      {{ range first $b . }}
+      {{ partial "recommendation-sub.html" . }}
+      {{ end }}
+      {{ end }}
+      {{ with $related3 | shuffle }}
+      {{ range first $c . }}
+      {{ partial "recommendation-sub.html" . }}
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</nav>

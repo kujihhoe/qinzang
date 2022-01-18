@@ -2,7 +2,7 @@
 <div class="vertical-wrap">
   {{ partial "sidebar.html" . }}
   <article class="DocSearch-content vertical">
-    {{ partial "article-front.html" . }}
+    {{ partial "article-info.html" . }}
     {{ .Content }}
   </article>
   {{ if and .TableOfContents (gt (len .TableOfContents) 40 ) }}
@@ -14,24 +14,28 @@
 
 {{ else }}
 {{ if eq .Page.Type "gallery" }}
-<article class="DocSearch-content">
-  {{ partial "article-front.html" . }}
-  {{ .Content }}
-</article>
+<div class="u-wrap">
+  <article class="DocSearch-content">
+    {{ partial "article-info.html" . }}
+    {{ .Content }}
+  </article>
+</div>
 
 {{ else }}
 
-<div class="verticlal-false-wrap">
-  {{ partial "sidebar.html" . }}
-  <article class="DocSearch-content vertical-false">
-    {{ partial "article-front.html" . }}
-    {{ .Content }}
-  </article>
-  {{ if and .TableOfContents (gt (len .TableOfContents) 40 ) }}
-  <aside class="toc toc-verticlal-false">
-    {{ .TableOfContents }}
-  </aside>
-  {{ end }}
+<div class="u-wrap">
+  <div class="horizontal-wrap">
+    {{ partial "sidebar.html" . }}
+    <article class="DocSearch-content horizontal">
+      {{ partial "article-info.html" . }}
+      {{ .Content }}
+    </article>
+    {{ if and .TableOfContents (gt (len .TableOfContents) 40 ) }}
+    <aside class="toc toc-horizontal">
+      {{ .TableOfContents }}
+    </aside>
+    {{ end }}
+  </div>
 </div>
 {{ end }}
 {{ end }}

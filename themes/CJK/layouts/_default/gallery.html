@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="u-wrap">
+  {{ partial "nav-article.html" . }}
+</div>
+<main>
+  <article>
+    {{ .Content | safeHTML }}
+  </article>
+  {{ partial "comments.html" . }}
+</main>
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="u-wrap">
+  {{ partial "nav-wiki.html" . }}
+</div>
+<main>
+  <div class="u-wrap">
+    {{ range site.Taxonomies.book }}
+    {{ partial "archive-wiki-sub.html" . }}
+    {{ end }}
+  </div>
+</main>
+{{ end }}

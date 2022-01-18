@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ site.LanguageCode }}">
+
 <head>
   {{ partial "meta.html" . }}
   {{ partial "title.html" . }}
   {{ partial "link.html" . }}
   {{ partial "load_site_assets.html" . }}
   {{ block "load_page_assets" . }}
-    {{ with .Content }}{{ end }}
+  {{ with .Content }}{{ end }}
   {{ end }}
   {{ partial "assets.html" . }}
   {{ partial "mathjax_support.html" . }}
 </head>
+<nav class="heading-wrap">
+  {{ partial "banner.html" . }}
+</nav>
+
 <body>
-        {{ block "main" . }}{{ end }}
-        {{ partial "footer.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
 </body>
+
 </html>

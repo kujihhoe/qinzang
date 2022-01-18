@@ -1,0 +1,29 @@
+{{ $name := "" }}
+{{ if eq .RelPermalink "/qinyi/" }}
+{{ $name = "琴易" }}
+{{ end }}
+
+{{- $length := len .Data.Pages }}
+{{ $count := 0 }}{{ range .Pages }}{{ $count = add $count .WordCount }}{{ end }}
+
+<header class="nav-tab-wrap">
+  <div class="nav-tab">
+    <div>
+      <h0 class="a1"><a href="/#net">通訊</a></h0>
+    </div>
+    <nav class="tab-wrap">
+      <span class='tab a1 a3 {{ if eq .RelPermalink "/qinyi/" }}active{{ end }}'><a href="/qinyi/">琴易</a></span>
+      {{ if eq .RelPermalink "/qinyi/" }}
+      <button class='a1 a3'><a href='https://kqhnewsletter.zhubai.love' target="_blank">訂閱</a></button>
+      {{ end }}
+      <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
+    </nav>
+  </div>
+  {{ with $des := index (site.Data.taxo ) $name }}<p>{{ $des.des | safeHTML | markdownify }}</p>{{ end }}
+  <p class="des-base a1" style="font-size: .9em;">
+    {{ if $length }}凡 {{ $length }} 篇　{{- $count }} 字　篇均 {{ div $count $length }} 字　{{- with .Data.Pages.GroupByDate
+    "2006" -}}橫跨 {{ len . }} 年{{- end -}}{{ end }}
+    　<a class="rss3" href="{{- .Permalink -}}index.xml" target="_blank"><span class="rss1">{{ $name }}</span><span
+        class="rss2">RSS</span></a>
+  </p>
+</header>

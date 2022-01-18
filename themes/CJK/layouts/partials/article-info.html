@@ -1,0 +1,162 @@
+<div class="article-info">
+    <div class="des-base a1">
+        <time datetime='{{ .Date.Format "2006-01-02" }}'>
+            {{ .Date.Format "2006-01-02" }}
+            {{ if ne .Date .Lastmod }}>{{- .Lastmod.Format "06-01-02" }}{{ end }}
+            {{ if ne .Date .PublishDate }}○ {{ .PublishDate.Format "06-01-02" }}{{ end }}
+        </time>
+        <span><strong>字數</strong> {{ .WordCount }}</span>
+        <!-- {{ partial "sourcecode.html" . }} -->
+    </div>
+    {{ $name := slice }}
+    <div class="des-base des-tag a1">
+        {{ with .Params.author }}
+        <span><strong>作者</strong>
+            {{ range . }}
+            {{ $name = . }}
+            {{ with site.GetPage "term" (printf "author/%s" $name) | default (site.GetPage "term" (printf
+            "author/%s" ($name | urlize))) }}
+            <a href="/author/{{ $name }}">@{{ $name }}</a></span>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+
+        {{ with .Params.category }}
+        　<span><strong>分類</strong>
+            {{ range . }}
+            {{ $name := . }}
+            {{ with site.GetPage "term" (printf "category/%s" $name) | default (site.GetPage "term" (printf
+            "category/%s" ($name | urlize))) }}
+            <a href="/category/{{ $name }}">[{{ $name }}]</a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.toc }}
+            　<strong>目錄</strong>
+            {{ range . }}
+            {{ $name := . }}
+            {{ with site.GetPage "term" (printf "toc/%s" $name) | default (site.GetPage "term" (printf "toc/%s"
+            ($name |
+            urlize))) }}
+            <a href="/toc/{{ $name }}">[{{ $name }}]</a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.tutokind }}
+            　<strong>系列</strong>
+            {{ range . }}
+            {{ $name := . }}
+            {{ with site.GetPage "term" (printf "tutokind/%s" $name) | default (site.GetPage "term" (printf
+            "tutokind/%s" ($name | urlize))) }}
+            <a href="/key#{{ $name }}">{{ $name }}｜</a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.datakind }}
+            　<strong>系列</strong>
+            {{ range . }}
+            {{ $name := . }}
+            {{ with site.GetPage "term" (printf "datakind/%s" $name) | default (site.GetPage "term" (printf
+            "datakind/%s" ($name | urlize))) }}
+            <a href="/database#{{ $name }}">{{ $name }}｜</a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.examkind }}
+            　<strong>系列</strong>
+            {{ range . }}
+            {{ $name := . }}
+            {{ with site.GetPage "term" (printf "examkind/%s" $name) | default (site.GetPage "term" (printf
+            "examkind/%s" ($name | urlize))) }}
+            <a href="/exam#{{ $name }}">{{ $name }}｜</a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.series }}
+            　<span><strong>系列</strong>
+                {{ range . }}
+                {{ $name := . }}
+                {{ with site.GetPage "term" (printf "series/%s" $name) | default (site.GetPage "term" (printf
+                "series/%s" ($name | urlize))) }}
+                <a href="/series/{{ $name }}">{{ $name }}｜</a></span>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.column }}
+            　<span><strong>專欄</strong>
+                {{ range . }}
+                {{ $name := . }}
+                {{ with site.GetPage "term" (printf "column/%s" $name) | default (site.GetPage "term" (printf
+                "column/%s" ($name | urlize))) }}
+                <a href="/column/{{ $name }}">{{ $name }}｜</a></span>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.tag }}
+            　<span><strong>標籤</strong>
+                {{ range . }}
+                {{ $name := . }}
+                {{ with site.GetPage "term" (printf "tag/%s" $name) | default (site.GetPage "term" (printf
+                "tag/%s"
+                ($name | urlize))) }}
+                <a href="/tag/{{ $name }}">#{{ $name }}</a></span>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+            {{ with .Params.book }}
+            　<span><strong>學科</strong>
+                {{ range . }}
+                {{ $name := . }}
+                {{ with site.GetPage "term" (printf "book/%s" $name) | default (site.GetPage "term" (printf
+                "book/%s" ($name | urlize))) }}
+                <a href="/read#{{ $name }}">《{{ $name }}》</a>
+                {{ end }}
+                {{ end }}
+                {{ end }}
+                {{ if .Params.step }}之{{ .Params.step }}</span>{{ end }}
+            {{ with .Params.note }}
+            　<span><strong>備註</strong>
+                {{ range . }}
+                {{ $name := . }}
+                {{ with site.GetPage "term" (printf "note/%s" $name) | default (site.GetPage "term" (printf
+                "note/%s" ($name | urlize))) }}
+                <a href="/note/{{ $name }}">({{ $name }})</a></span>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+    </div>
+
+    <div class="des-base des-tag a1">
+        <span><strong>版權</strong></span>
+        {{ if .Params.copyright }}
+        {{ .Params.copyright | safeHTML | markdownify }}
+        {{ else }}
+        {{ site.Params.copyright | safeHTML | markdownify }}        
+        {{ end }}
+        {{ if eq $name "吉鈺玲學" }}
+        {{ partial "jiyuling.html" . | safeHTML | markdownify }}
+        {{ else if eq $name "李泰衡" }}
+        {{ partial "litaiheng.html" . | safeHTML | markdownify }}
+        {{ end }}
+    </div>
+    {{ if .Params.summary }}
+    <div class="des-base des-tag a1">
+        <span><strong>摘要</strong></span>
+        {{ .Params.summary | safeHTML | markdownify }}
+    </div>
+    {{ end }}
+    {{ if .Params.keywords }}
+    <div class="des-base des-tag a1">
+        <span><strong>關鍵詞</strong></span>
+        {{ .Params.keywords }}
+    </div>
+    {{ end }}
+</div>

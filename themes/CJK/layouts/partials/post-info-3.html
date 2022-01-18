@@ -1,0 +1,5 @@
+<a href="{{ .Permalink }}" target="_blank">
+  <div class="column-cover scale" style="background-image: url({{ .Params.img }})">
+    <h3>{{- .Title | safeHTML | markdownify -}}</h3>
+  </div>
+</a>

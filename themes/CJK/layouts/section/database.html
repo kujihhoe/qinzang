@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="u-wrap">
+    {{ partial "nav-wiki.html" . }}
+</div>
+<main>
+    <div class="u-wrap">
+        <div class="discover-wrap">
+            <div class='discover a1'>
+                {{ range sort .Pages "File.Path" }}
+                {{ if .Params.img }}
+                <div class="discover-grid">
+                  <div class="post-card" style="background-image: url({{ .Params.img }})"></div>
+                  <div>
+                    {{ partial "post-info-sub.html" . }}
+                  </div>
+                </div>
+                {{ else }}
+                <div>
+                  <span>
+                    {{ partial "post-info-sub.html" . }}
+                  </span>
+                </div>
+                {{ end }}
+                {{ end }}
+              </div>
+        </div>
+    </div>
+</main>
+{{ end }}

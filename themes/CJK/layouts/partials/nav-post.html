@@ -1,0 +1,28 @@
+{{ $name := "" }}
+{{ if eq .RelPermalink "/post/" }}
+{{ $name = "論說" }}
+{{ else if eq .RelPermalink "/diary/" }}
+{{ $name = "散記" }}
+{{ end }}
+
+<header class="nav-tab-wrap">
+  <div class="nav-tab">
+    <div>
+      <h0 class="a1"><a href="/#post">文章</a></h0>
+    </div>
+    <nav class="tab-wrap">
+      <span class='tab a1 a3 {{ if eq .RelPermalink "/post/" }}active{{ end }}'><a href="/post/">論說</a></span>
+      <span class='tab a1 a3 {{ if eq .RelPermalink "/diary/" }}active{{ end }}'><a href="/diary/">散記</a></span>
+      <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
+    </nav>
+  </div>
+  {{- $length := len .Data.Pages }}
+  {{ $count := 0 }}{{ range .Pages }}{{ $count = add $count .WordCount }}{{ end }}
+  {{ with $des := index (site.Data.taxo ) $name }}<p>{{ $des.des | safeHTML | markdownify }}</p>{{ end }}
+  <p class="des-base a1" style="font-size: .9em;">
+    凡 {{ $length }} 篇　{{- $count }} 字　篇均 {{ div $count $length }} 字　{{- with .Data.Pages.GroupByDate "2006" -}}橫跨 {{
+    len . }} 年{{- end -}}
+    　<a class="rss3" href="{{- .Permalink -}}index.xml" target="_blank"><span class="rss1">{{ $name }}</span><span
+        class="rss2">RSS</span></a>
+  </p>
+</header>

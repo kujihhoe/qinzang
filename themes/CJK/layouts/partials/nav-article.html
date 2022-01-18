@@ -1,0 +1,48 @@
+<header class="nav-tab-wrap">
+  <div class="nav-tab">
+    {{ if eq .Page.Type "post" "diary" }}
+    <div>
+      <h0 class="a1"><a href="/#post">文章</a></h0>
+    </div>
+    <nav class="tab-wrap">
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "post" }}active{{ end }}'><a href="/post/">論說</a></span>
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "diary" }}active{{ end }}'><a href="/diary/">散記</a></span>
+      </nav>
+    {{ else if eq .Page.Type "read" "key" "database" }}
+    <div>
+      <h0 class="a1"><a href="/#wiki">知識</a></h0>
+    </div>
+    <nav class="tab-wrap">
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "read" }}active{{ end }}'><a
+          href="/read/">讀書</a></span>
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "key" }}active{{ end }}'><a href="/key/">教程</a></span>
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "database" }}active{{ end }}'><a
+          href="/database/">資料</a></span>      
+      <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
+    </nav>
+    {{ else if eq .Page.Type "qinyi" }}
+    <div>
+      <h0 class="a1"><a href="/#net">通訊</a></h0>
+    </div>
+    <nav class="tab-wrap">
+      <span class='DocSearch-lvl0 tab a1 a3 {{ if eq .Page.Type "qinyi" }}active{{ end }}'><a
+          href="/qinyi/">琴易</a></span>
+      {{ if eq .Page.Type "qinyi" }}
+      <button class='a1 a3'><a href='https://kqhnewsletter.zhubai.love' target="_blank">訂閱</a></button>
+      {{ end }}
+     </nav>
+    {{ else if eq .Page.Type "pin" }}
+    <div>
+      <h0 class="DocSearch-lvl0 a1">置頂</h0>
+    </div>
+    <div class="tab-wrap">
+      <h1 class="DocSearch-lvl1 a1">{{ .Title }}</h1>
+    </div>
+     {{ end }}
+  </div>
+  {{ if eq .Page.Type "pin" }}
+  {{ if .Description }}
+  <p>{{ .Description | safeHTML | markdownify }}</p>
+  {{ end }}
+  {{ end }}
+</header>

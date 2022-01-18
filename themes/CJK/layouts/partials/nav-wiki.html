@@ -1,0 +1,40 @@
+{{ $name := "" }}
+{{ if eq .RelPermalink "/read/" }}
+{{ $name = "讀書" }}
+{{ else if eq .RelPermalink "/key/" "/key/2/" }}
+{{ $name = "教程" }}
+{{ else if eq .RelPermalink "/database/" }}
+{{ $name = "資料" }}
+{{ end }}
+
+{{- $length := len .Data.Pages }}
+{{ $count := 0 }}{{ range .Pages }}{{ $count = add $count .WordCount }}{{ end }}
+
+<header class="nav-tab-wrap">
+  <div class="nav-tab">
+    <div>
+      <h0 class="a1"><a href="/#wiki">知識</a></h0>
+    </div>
+    <nav class="tab-wrap">
+      <div>
+        <span class='tab a1 a3 {{ if eq .RelPermalink "/read/" }}active{{ end }}'><a
+            href="/read/">讀書</a></span>
+        <span class='tab a1 a3 {{ if eq .RelPermalink "/key/" "/key/2/" }}active{{ end }}'><a href="/key/">教程</a></span>
+        <span class='tab a1 a3 {{ if eq .RelPermalink "/database/" }}active{{ end }}'><a
+            href="/database/">資料</a></span>        
+        <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
+      </div>
+      {{ if eq .RelPermalink "/key/" "/key/2/" }}
+      {{ partial "nav-key.html" . }}      
+      {{ end }}
+    </nav>
+  </div>
+  {{ with $des := index (site.Data.taxo ) $name }}<p>{{ $des.des | safeHTML | markdownify }}</p>{{ end }}
+  <p class="des-base a1" style="font-size: .9em;">
+    {{ if $count }}凡 {{ $length }} 篇　{{ $count }} 字　篇均 {{ div $count $length }} 字　{{ with .Data.Pages.GroupByDate "2006"
+    }}橫跨 {{
+    len . }} 年{{ end }}{{ end }}
+    　<a class="rss3" href="{{- .Permalink -}}index.xml" target="_blank"><span class="rss1">{{ $name }}</span><span
+        class="rss2">RSS</span></a>
+  </p>
+</header>

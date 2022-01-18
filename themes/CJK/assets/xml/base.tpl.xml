@@ -28,7 +28,7 @@
         <main>
           <div class="u-wrapper">
             <div class="u-padding">
-              <h2 class="heading-title a1">
+              <h2 class="a1">
                 <a class="u-clickable" href="{link}" rel="bookmark"><xsl:value-of select="title" /></a>
               </h2>
               {{ with site.Params.rss }}

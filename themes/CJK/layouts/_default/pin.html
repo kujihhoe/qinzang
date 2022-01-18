@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="u-wrap">
+    {{ partial "nav-article.html" . }}
+</div>
+<main>
+    <div class="u-wrap">
+        <div class="horizontal-wrap">
+            {{ partial "sidebar.html" . }}
+            <article class="DocSearch-content horizontal">
+                {{ partial "article-info.html" . }}
+                {{ .Content }}
+            </article>
+            {{ if and .TableOfContents (gt (len .TableOfContents) 40 ) }}
+            <aside class="toc toc-horizontal">
+                {{ .TableOfContents }}
+            </aside>
+            {{ end }}
+        </div>
+    </div>
+    {{ partial "prevnext.html" . }}
+    {{ partial "comments.html" . }}
+</main>
+{{ end }}

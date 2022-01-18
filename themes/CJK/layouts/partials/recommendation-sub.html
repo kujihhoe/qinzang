@@ -1,0 +1,13 @@
+<span>
+  <a href="{{ .Permalink }}" target="_blank">
+    <div class="recommendation-card scale" style="
+      {{ if .Params.img }}
+      background-image: url({{ .Params.img }})
+      {{ else }}
+      background: var(--bg)
+      {{ end }}
+      ">
+      <div>{{ .Title | safeHTML | markdownify }}</div>
+    </div>
+  </a>
+</span>

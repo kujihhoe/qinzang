@@ -1,0 +1,22 @@
+{{ with .Page }}
+<div class="douban-wrap grid-bg bggray a1 a3">
+  <a href="{{ .Params.link }}" target="_blank">
+    <div class="douban-wrap-img border2 scale" style="background-image:url({{ .Params.img }})">
+    </div>
+  </a>
+  <div>
+    {{ if .Params.bookname }}<p><span class="gray bold">原名</span> {{ .Params.bookname }}</p>{{ end }}
+    <p><span class="gray bold">作者</span> {{ .Params.bookauthor }}</p>
+    {{ if .Params.booktrans }}<p><span class="gray bold">譯者</span> {{ .Params.booktrans }}</p>{{ end }}
+    <p><span class="gray bold">出版社</span> {{ .Params.bookpub }}</p>
+    <p><span class="gray bold">出版時間</span> {{ .Params.bookyear }}</p>
+    {{ if .Params.bookwords }}<p><span class="gray bold">千字</span> {{ .Params.bookwords }}</p>{{ end }}
+    <div>
+      <p><span class="gray bold">豆瓣評分</span> <span>{{ .Params.bookrating }}</span>
+      <div class="border2" style="height:1em;width: 10em;background: var(--bg);">
+        <div style="border-radius: 1em; background: var(--shallowgray); height:1em; width:{{ .Params.bookrating }}em"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

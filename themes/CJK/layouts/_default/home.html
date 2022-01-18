@@ -1,16 +1,179 @@
 {{ define "main" }}
-<main>
-  <div class="u-wrap">
-    尚在建設，請諒解
-    <div class="discover-wrap">
-      <div class="discover a1">
-        {{ range site.Taxonomies.toc.Alphabetical }}
+<main class="home a1">
+  <div style="background: var(--shallowblack);margin-top:-3em;height:14em">
+    <div class="site-title"></div>
+  </div>
+  <section>
+    <div class="u-wrap">
+      <h0 id="post" style="margin-top:0;">文章</h0>
+      <h2><a href="/post" target="_blank">論說</a></h2>
+      <div class="discover-wrap">
+        <div class="discover column2">
+          {{ range first 4 (where site.RegularPages.ByPublishDate.Reverse "Type" "post") }}
+          <div class="discover-grid">
+            {{ partial "post-info.html" . }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      <h2 id="diary">
+        <a href="/diary" target="_blank">散記</a>
+      </h2>
+      <div class="discover-wrap">
+        <div class="discover column3">
+          {{ range first 3 (where site.RegularPages.ByPublishDate.Reverse "Type" "diary") }}
+          <div class="discover-grid">
+            {{ partial "post-info.html" . }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bgwhite">
+    <div class="u-wrap">
+      <h0 id="wiki">知識</h0>
+      <div>
+        <h2><a href="/read" target="_blank">讀書</a></h2>
+        {{ $readLateset := slice }}
+        {{ range first 3 (where site.RegularPages.ByDate.Reverse "Type" "read") }}
+        {{ $readLateset = $readLateset | append . }}
+        {{ end }}
+        {{ $readRandom := slice }}
+        {{ with (where site.RegularPages.ByDate.Reverse "Type" "read") }}
+        {{ $lengRead := len . }}
+        {{ range last (sub $lengRead 3) . | shuffle }}
+        {{ $readRandom = $readRandom | append . }}
+        {{ end }}
+        {{ end }}
+        <div class="discover column4">
+          {{ range $readLateset }}
+          <div>
+            <div class="grid-bg gradient1">
+              {{ partial "post-info.html" . }}
+            </div>
+          </div>
+          {{ end }}
+          {{ range first 1 $readRandom }}
+          <div>
+            <div class="grid-bg gradient1">
+              {{ partial "post-info.html" . }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <div class="discover column2">
+          <div>
+            <h2><a href="/key" target="_blank">教程</a></h2>
+            {{ with $des := index (site.Data.taxo ) "赫赫金鑰" }}
+            <div class="des-taxo">{{ $des.des | safeHTML | markdownify }}
+            </div>
+            {{ end }}
+            <div class="discover column4">
+              {{ range first 2 (where site.RegularPages "Type" "key") }}
+              <div>
+                <div class="grid-bg gradient2">
+                  {{ partial "post-info-2.html" . }}
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+          <div>
+            <h2><a href="/database" target="_blank">資料</a></h2>
+            <div class="discover column4">
+              {{ range first 2 (where site.RegularPages "Type" "database") }}
+              <div>
+                <div class="grid-bg gradient2">
+                  {{ partial "post-info-2.html" . }}
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="gradient4 a1" style="padding-top: 5em;">
+    <div class="u-wrap">
+      <center><button class="a3"><a href="/about" target="_blank">誠邀作者</a></button></center>
+      <div class="discover column2">
+        {{ range site.Taxonomies.author.ByCount }}
+        {{ $name := .Page.Title }}
+        {{ if ne $name "査阜西" "瑚璉琴社" "絲桐神品" }}
+        {{ $count := .Count }}
         <div>
-          <a href="{{ .Page.Permalink }}" target="_blank">{{- .Page.Title | safeHTML -}}</a>
+          <div class="columnist-wrap">
+            <div>
+              {{- with $icon := index site.Data.icon .Page.Title -}}
+              {{ if $icon.icon }}
+              <span class="icon" style="background-image: url({{ $icon.icon }})"></span>
+              {{ end }}
+            </div>
+            <div>
+              <div class="a1" style="font-size: 1.5em;font-weight: bold;">
+                <a href="/author/{{ $name }}">{{ $name }}</a>
+                <sup class="tag-count"> {{ $count }}</sup>
+                <span class="des-base author-mail">{{ $icon.mail }}</span>
+              </div>
+              <p class="des-base black">{{ $icon.description }}</p>
+              {{- end -}}
+              <ul>
+                {{ range first 3 .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Page.Title }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg1">
+    <div class="u-wrap">
+      <h0 id="net">通訊</h0>
+      <div style="margin: 0 auto 3em;">
+        <h2> <a href="/qinyi" target="_blank">琴易</a> </h2>
+        <p class="des-taxo" style="line-height: 1.5;margin:-.5em auto .5em;">
+          {{ with $des := index (site.Data.taxo ) "琴易" -}}{{- $des.des | safeHTML | markdownify -}}{{ end }}
+        </p>
+        <center><button class='a3' style="font-size: .9em;"><a href='https://kqhnewsletter.zhubai.love'
+              target="_blank">訂閱</a></button></center>
+      </div>
+      <div class="discover column3" style="margin-top: -1em;">
+        {{ range first 3 (where site.RegularPages "Type" "qinyi") }}
+        <div class="discover-grid">
+          {{ partial "post-info-2.html" . }}
         </div>
         {{ end }}
       </div>
     </div>
-  </div>
+  </section>
+
+  <section>
+    <div class="u-wrap">
+      <h0 id="qinpu" style="margin-top:0;">琴藏</h0>
+      <p class="des-taxo" style="margin-top:-2em;text-align: left;">
+        {{ with $des := index (site.Data.taxo ) "琴藏" -}}{{- $des.des | safeHTML | markdownify -}}{{ end }}
+      </p>
+      <div class="discover-wrap">
+        <div class="discover a1">
+          {{ range site.Taxonomies.toc.Alphabetical }}
+          <div>
+            <a href="{{ .Page.Permalink }}" target="_blank">{{- .Page.Title | safeHTML -}}</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 {{ end }}

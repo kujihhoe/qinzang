@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="u-wrap">
+  {{ partial "nav-wiki.html" . }}
+</div>
+<main>
+  <div class="u-wrap">
+    {{ with site.Taxonomies.tutokind.琴 }}
+    {{ partial "archive-wiki-sub.html" . }}
+    {{ end }}
+    {{ with site.Taxonomies.tutokind.其他 }}
+    {{ partial "archive-wiki-sub.html" . }}
+    {{ end }}
+  </div>
+</main>
+{{ end }}

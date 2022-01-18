@@ -1,4 +1,12 @@
 User-agent: *
 Sitemap: {{ "sitemap.xml" | absURL }}
 
-Disallow: /toc/*
+Disallow: /pin/
+Disallow: /post/layout/
+Disallow: /category/*
+Disallow: /series/*
+Disallow: /tag/*
+Disallow: /note/*
+Disallow: /author/*
+Disallow: /book/*
+Disallow: /tutokind/*

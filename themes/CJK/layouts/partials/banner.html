@@ -1,5 +1,40 @@
-<nav class="banner-wrap">
+<nav class="u-wrap banner-wrap">
     <div class="banner a1">
-        <a href="/">赫赫琴藏</a>
+        <a href="/">琴衡</a>
+        <details>
+            <summary>導航</summary>
+            <div class="banner-details">
+                {{ range site.Menus.nav0 }}
+                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
+                {{- end -}}
+                <div style="color: var(--gray);">文章</div>
+                {{ range site.Menus.nav1 }}
+                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
+                {{- end -}}
+                <div style="color: var(--gray);">知識</div>
+                {{ range site.Menus.nav2 }}
+                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
+                {{- end -}}
+                <div style="color: var(--gray);">通訊</div>
+                {{ range site.Menus.nav3 }}
+                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
+                {{- end -}}
+                <br>
+                <div><a href="/#qinpu">琴藏</a></div>
+            </div>
+        </details>
+        <details>
+            <summary>置頂</summary>
+            <div class="banner-details">
+                {{ with where site.RegularPages "Type" "pin" }}
+                {{ range sort . "File.Path" }}
+                <div><a href="{{  .Permalink  }}">{{ .Title }}</a></div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </details>
+    </div>
+    <div class="banner fr a1">
+        <input id="algolia-autocomplete" placeholder="搜索 無需回車" class="search">
     </div>
 </nav>
