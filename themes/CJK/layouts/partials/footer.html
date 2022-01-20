@@ -1,8 +1,13 @@
 <footer class="footer-wrapper">
   <div class="col-wrap">
     <nav class="footer a2">
-      訂閱｜<a href="/index.xml" target="_blank" style="font-weight:bold">RSS</a>　<a
-        href="https://kqhnewsletter.zhubai.love" target="_blank" style="font-weight:bold">newsletter</a>　<a
+      {{- with where site.RegularPages "Type" "pin" -}}
+      {{- range sort . "File.Path" -}}
+      <a href="{{  .Permalink  }}">{{- .Title -}}</a>｜
+      {{- end -}}
+      {{- end -}}
+      <br>訂閱｜<a href="/index.xml" target="_blank" style="font-weight:bold">RSS</a>　<a
+        href="https://kqhnewsletter.zhubai.love" target="_blank" style="font-weight:bold">琴易通訊</a>　<a
         href="/sitemap.xml" target="_blank">sitemap</a><br>
       copyright <a href="/">琴衡</a>　2022-01-01 > {{ now.Format "2006" -}}　運營 <a href="https://me.kqh.me" target="_blank">柯棋瀚</a><br>
       power <a href="https://gohugo.io" target="_blank">Hugo</a>　theme <a

@@ -1,40 +1,26 @@
-<nav class="u-wrap banner-wrap">
-    <div class="banner a1">
-        <a href="/">琴衡</a>
-        <details>
-            <summary>導航</summary>
-            <div class="banner-details">
-                {{ range site.Menus.nav0 }}
-                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
-                {{- end -}}
-                <div style="color: var(--gray);">文章</div>
-                {{ range site.Menus.nav1 }}
-                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
-                {{- end -}}
-                <div style="color: var(--gray);">知識</div>
-                {{ range site.Menus.nav2 }}
-                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
-                {{- end -}}
-                <div style="color: var(--gray);">通訊</div>
-                {{ range site.Menus.nav3 }}
-                <div><a href="{{  .URL  }}">{{- .Name | safeHTML -}}</a></div>
-                {{- end -}}
-                <br>
-                <div><a href="/#qinpu">琴藏</a></div>
+<nav class="u-wrap" style="padding-bottom: 1em;">
+    <div class="banner-wrap a1">
+        <div>
+            <a href="https://kqh.me" target="_blank">赫赫文王</a>
+            <a href="https://cal.kqh.me" target="_blank">曆藏</a>
+            <a href="https://rec.kqh.me" target="_blank">情形於聲</a>
+            <a href="https://chunqiu.kqh.me" target="_blank">春秋學刊</a>
+            <a href="https://me.kqh.me" target="_blank">柯棋瀚</a>
+        </div>
+        <a href="/">
+            <div class="site-title"></div>
+        </a>
+        <div>
+            <div>
+                <a href="/post">論說</a>
+                <a href="/diary">散記</a>｜
+                <a href="/read">讀書</a>
+                <a href="/key">教程</a>
+                <a href="/database">資料</a>｜
+                <a href="/newsletter">琴易</a>｜
+                <a href="/#qinpu">琴藏</a>
             </div>
-        </details>
-        <details>
-            <summary>置頂</summary>
-            <div class="banner-details">
-                {{ with where site.RegularPages "Type" "pin" }}
-                {{ range sort . "File.Path" }}
-                <div><a href="{{  .Permalink  }}">{{ .Title }}</a></div>
-                {{ end }}
-                {{ end }}
-            </div>
-        </details>
-    </div>
-    <div class="banner fr a1">
-        <input id="algolia-autocomplete" placeholder="搜索 無需回車" class="search">
+            <input id="algolia-autocomplete" placeholder="搜索 無需回車" class="search">
+        </div>
     </div>
 </nav>

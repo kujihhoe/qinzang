@@ -40,16 +40,4 @@ vertical: false
 
 ## 技術
 
-- <bc>平臺</bc> ~~<a href="https://pages.github.com" target="\_blank">Github Pages</a>~~ [netlify](https://www.netlify.com)
-- <bc>DNS, SSL</bc> ~~<a href="https://www.cloudflare.com/" target="\_blank">Cloudflare</a>~~ netlify 
-- <bc>引擎</bc>  ~~<a href="https://jekyllrb.com/" target="\_blank">Jekyll</a>~~ [hugo](https://gohugo.io/)
-- <bc>主題</bc> ~~<a href="https://github.com/kitian616/jekyll-TeXt-theme" target="\_blank">kitian616</a> 提供網誌主題模板 Text。[jane](https://github.com/xianmin/hugo-theme-jane)，~~基於 Flex 魔改。
-- <bc>域名</bc> ~~<a href="https://tw.godaddy.com/" target="\_blank">GoDaddy</a>~~ [dynadot](https://www.dynadot.com)
-- <bc>文件存儲</bc> <a href="https://git-lfs.github.com/" target="\_blank">Git LFS</a> <a href="https://portal.qiniu.com/dora" target="\_blank">~~七牛雲~~</a>
-- <bc>圖牀</bc> [聚合圖牀](https://pic.imgdb.cn)，
-- <bc>流量分析</bc> Google Analytics ~~<a href="http://busuanzi.ibruce.info/" target="\_blank">不蒜子</a> 提供全站 UV、PV 統計<n>自 20171021 開始，目前不顯示，因爲跟谷歌的比誤差有點大</n>~~ 
-- <bc>評論</bc> [Hyvor Talk](https://talk.hyvor.com) ~~[詔預Isso開放服務](https://open.saintic.com/openservice/isso) [Valine](https://valine.js.org) [Gitalk](https://gitalk.github.io/)，leancloud 提供文章點擊量統計<n>20181026 之歬爲 UV，之後開始累加 PV</n>，~~
-- ~~<bc>廣告</bc> [Google AdSense ](https://www.google.com/adsense/) 廣告~~
-- ~~文章存儲於 IPFS 分布式系統~~。
-- <bc>檢索</bc>1、本站已支持 Algolia，歡迎使用！2、直接用 <a href="https://www.google.com/search?q=site:kqh.me" target="\_blank">Google</a><n>Google 收錄得又全又快</n>，例子：`site:kqh.me 芋圓`，中閒記得加空格。搜索引擎對網頁內容的更新不會很頻繁，很可能我修改了一些內容，但沒有被收錄，導致搜索結果不準確。
-- 網站借鑒了 [少數派](https://sspai.com) 的設計，表示感謝。
+見 [赫赫文王關於](https://kqh.me/about)。
