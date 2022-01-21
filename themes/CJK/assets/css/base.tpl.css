@@ -1104,26 +1104,6 @@ h0 {
   text-align: left
 }
 
-.sentence-wrap {
-  margin: calc(18%) auto auto;
-  max-width: 30em;
-}
-
-.sentence {
-  padding-top: 16px;
-  line-height: 1.6;
-  border-top: 1px solid var(--black);
-  color: var(--black)
-}
-
-.sentence1 {
-  font-size: 1.2em;
-}
-
-.sentence2 {
-  font-size: .7em;
-}
-
 .sectionColumn {
   margin: 0 auto;
   /* background:
