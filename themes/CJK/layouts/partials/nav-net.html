@@ -16,7 +16,6 @@
       {{ if eq .RelPermalink "/newsletter/" }}
       <button class='a1 a3'><a href='https://kqhnewsletter.zhubai.love' target="_blank">訂閱</a></button>
       {{ end }}
-      <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
     </nav>
   </div>
   {{ with $des := index (site.Data.taxo ) $name }}<p>{{ $des.des | safeHTML | markdownify }}</p>{{ end }}

@@ -13,7 +13,6 @@
     <nav class="tab-wrap">
       <span class='tab a1 a3 {{ if eq .RelPermalink "/post/" }}active{{ end }}'><a href="/post/">論說</a></span>
       <span class='tab a1 a3 {{ if eq .RelPermalink "/diary/" }}active{{ end }}'><a href="/diary/">散記</a></span>
-      <span class='tab a1' style="font-size: .9em;"><a href="/about" target="_blank">稿約</a></span>
     </nav>
   </div>
   {{- $length := len .Data.Pages }}
