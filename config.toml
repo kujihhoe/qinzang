@@ -96,7 +96,7 @@ Sections3 = [
   "qinpu"  
 ]
 
-copyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>，非商業用途可隨意使用'
+copyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 非商業用途的使用請註明來源'
 vertical = true
 summaries = false # Set to true to show summaries of posts on homepage
 divider = false #\a0 Set to false to remove divider below posts on homepage
