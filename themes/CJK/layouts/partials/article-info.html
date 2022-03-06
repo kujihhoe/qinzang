@@ -136,15 +136,14 @@
 
     <div class="des-base des-tag a1">
         <span><strong>版權</strong></span>
+        {{ if eq .Page.Type "newsletter" }}
+        版權歸原作者所有，請勿轉載
+        {{ else }}
         {{ if .Params.copyright }}
         {{ .Params.copyright | safeHTML | markdownify }}
         {{ else }}
-        {{ site.Params.copyright | safeHTML | markdownify }}        
+        {{ site.Params.copyright | safeHTML | markdownify }}
         {{ end }}
-        {{ if eq $name "吉鈺玲學" }}
-        {{ partial "jiyuling.html" . | safeHTML | markdownify }}
-        {{ else if eq $name "李泰衡" }}
-        {{ partial "litaiheng.html" . | safeHTML | markdownify }}
         {{ end }}
     </div>
     {{ if .Params.summary }}
