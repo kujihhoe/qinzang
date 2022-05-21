@@ -10,7 +10,7 @@
   {{ with .Content }}{{ end }}
   {{ end }}
   {{ partial "assets.html" . }}
-  {{ partial "mathjax_support.html" . }}
+  {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
 </head>
 <nav class="heading-wrap">
   {{ partial "banner.html" . }}
