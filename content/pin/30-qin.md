@@ -43,7 +43,7 @@ https://organic.cpu.edu.cn/chimusic/琴/ 一个神奇的網站，這是古琴錄
 
 [熊发学](http://blog.sina.com.cn/s/blog_5cd9f0f60100qkjf.html)　关于王华德
 
-[水激石鸣](https://blog.tianya.cn/listcate-114513-0-1.shtml) 　2005—2014 年
+[水激石鸣](https://blog.tianya.cn/listcate-114513-0-1.shtml) 　2005–2014 年
 
 [画中琴•李寿墓线刻壁画（唐）_弹琴论道](http://blog.sina.com.cn/s/blog_c4f3c7040102uxnr.html)
 
