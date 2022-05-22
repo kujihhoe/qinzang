@@ -32,10 +32,11 @@
   --colorBg3:{{ index $slice2 2 }};
   --colorBg4:{{ index $slice2 3 }};
   
-  --serif:"Adobe Garamond Pro",Garamond,"Adobe Caslon Pro",Caslon,"Minion Pro",Minion,"Adobe Gurmukhi","Palatino Linotype","Adobe Garamond Pro",Garamond,"Adobe Caslon Pro",Caslon,"Minion Pro",Minion,"Adobe Gurmukhi","Palatino Linotype","Noto Serif CJK KR","Source Han Serif K","Noto Serif CJK SC","Hiragino Mincho ProN","Hiragino Mincho","Yu Mincho","Hana Mincho","Ms Mincho";
-  --codeserif:"Source Code Pro",Menlo, Inconsolata,"Courier New","Anonymous Pro",monospace,"Noto Serif CJK KR","Source Han Serif K","Noto Serif CJK SC","Hiragino Mincho ProN","Hiragino Mincho","Yu Mincho","Hana Mincho","Ms Mincho";
-  --sans:Verdana,Trebuchet, muli, avenir, "helvetica neue", helvetica, ubuntu, roboto, noto,arial,"Noto Sans CJK Kr","Noto Sans CJK SC", PingFang,"PingFang SC",Sans-serif;
-  --codesans:"Source Code Pro",Menlo, Inconsolata,"Courier New","Anonymous Pro",monospace, "Noto Sans CJK Kr",NotoSansCJKKr,"Noto Sans CJK SC",NotoSansCJKSC, PingFang,PingFangSC,Sans-serif;
+  --serif: "Adobe Garamond Pro", Garamond, "Adobe Caslon Pro", Caslon, "Minion Pro", Minion, "Adobe Gurmukhi", "Palatino Linotype", "Noto Serif CJK KR", "Source Han Serif K", "Noto Serif CJK SC", "Hiragino Mincho ProN", "Hiragino Mincho", "Yu Mincho", "Hana Mincho", "Ms Mincho", simsun;
+  --codeserif: "Source Code Pro", Menlo, Inconsolata, "Courier New", "Anonymous Pro", monospace, "Noto Serif CJK KR", "Source Han Serif K", "Noto Serif CJK SC", "Hiragino Mincho ProN", "Hiragino Mincho", "Yu Mincho", "Hana Mincho", "Ms Mincho", simsun;
+  --sans: Verdana, Trebuchet, muli, avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, arial, "Noto Sans CJK Kr","Noto Sans CJK SC", PingFang, "PingFang SC", Sans-serif;
+  --codesans: "Source Code Pro", Menlo, Inconsolata, "Courier New", "Anonymous Pro", monospace, "Noto Sans CJK Kr",NotoSansCJKKr, "Noto Sans CJK SC", NotoSansCJKSC, PingFang, PingFangSC, Sans-serif;
+  --kai: STKaiti, STKai, "FZNewKai_GB18030-Z03", "Kaiti TC", Kaiti, "Kaiti SC", Kai;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -191,7 +192,8 @@ b {
 }
 
 v {
-  text-decoration: wavy underline var(--gray) 1.5px;
+  font-family: var(--kai);
+  /* text-decoration: wavy underline var(--gray) 1.5px; */
   /* border-bottom: .1em dashed var(--gray); */
   margin: 0 .1em
 }
@@ -214,7 +216,8 @@ n {
 }
 
 u {
-  border-bottom: .15em solid var(--shallowgray);
+  /* border-bottom: .15em solid var(--shallowgray); */
+  font-family: var(--serif);
   text-decoration: none;
   margin: 0 .1em
 }
@@ -246,7 +249,8 @@ time {
 }
 
 .vertical v {
-  text-decoration: wavy underline var(--shallowgray) .07em;
+  /* text-decoration: wavy underline var(--shallowgray) .07em; */
+  font-family: var(--kai);
   margin: .1em 0
 }
 
@@ -257,7 +261,8 @@ time {
 }
 
 .vertical u {
-  border-left: .15em solid var(--shallowgray);
+  /* border-left: .15em solid var(--shallowgray); */
+  font-family: var(--sans);
   border-bottom: none;
   text-decoration: none;
   margin: 1.5px 0
