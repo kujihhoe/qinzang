@@ -21,11 +21,11 @@ vertical: false
 
 [Qin Music](http://www.silkqin.com/)
 
-http://www.geocities.jp/qsshc/cmusic.html　掛了
+<http://www.geocities.jp/qsshc/cmusic.html>　掛了
 
  手寫查詢簡字譜。
 
-https://organic.cpu.edu.cn/chimusic/琴/ 一个神奇的網站，這是古琴錄音，很豐富。
+<https://organic.cpu.edu.cn/chimusic/琴/> 一个神奇的網站，這是古琴錄音，很豐富。
 
 ## 博客
 
