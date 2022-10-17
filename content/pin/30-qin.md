@@ -21,7 +21,7 @@ vertical: false
 
 [Qin Music](http://www.silkqin.com/)
 
-<http://www.geocities.jp/qsshc/cmusic.html>　掛了
+<http://www.geocities.jp/qsshc/cmusic.html> 掛了
 
  手寫查詢簡字譜。
 
@@ -39,9 +39,9 @@ vertical: false
 
 [楊典](http://blog.sina.com.cn/niezheng1972)
 
-[菏雨嫣然](http://blog.sina.com.cn/s/articlelist_1926990944_0_1.html)　李星棋学生
+[菏雨嫣然](http://blog.sina.com.cn/s/articlelist_1926990944_0_1.html) 李星棋学生
 
-[熊发学](http://blog.sina.com.cn/s/blog_5cd9f0f60100qkjf.html)　关于王华德
+[熊发学](http://blog.sina.com.cn/s/blog_5cd9f0f60100qkjf.html) 关于王华德
 
 [水激石鸣](https://blog.tianya.cn/listcate-114513-0-1.shtml) 　2005–2014 年
 

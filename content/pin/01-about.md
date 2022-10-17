@@ -15,7 +15,7 @@ vertical: false
 
 ## 吿示
 
-- 本站默認文章授權方式采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="\_blank">CC BY-NC-SA 4.0</a> <n>署名-非商業性使用-相同方式共享</n>國際條款，若需使用，請務必閱讀竝遵循條款內容。簡言之，非商業性使用無須告知作者，只要標明作者、出處就好
+- 本站默認文章授權方式采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="\_blank">CC BY-NC-SA 4.0</a> <n>署名 - 非商業性使用 - 相同方式共享</n>國際條款，若需使用，請務必閱讀竝遵循條款內容。簡言之，非商業性使用無須告知作者，只要標明作者、出處就好
 - 若發現文章中有不適宜的內容<n>如侵犯箇人隱私，牽涉箇人利益，損害箇人聲譽等</n>，請儘速郵件或評論告知我。
 
 ## 誠邀作者
