@@ -1,8 +1,8 @@
 User-agent: *
 Sitemap: https://qin.kqh.me/sitemap.xml
 
-Disallow: /pin/
-Disallow: /post/layout/
+# Algolia-Crawler-Verif: 0EB95BB7E3DBD3EE
+
 Disallow: /category/*
 Disallow: /series/*
 Disallow: /tag/*
