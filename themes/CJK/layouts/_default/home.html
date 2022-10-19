@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main class="home a1">
+<main class="home">
   <!-- <div style="background: var(--shallowblack);margin-top:-3em;height:14em"> -->
   <!-- <div class="site-title"></div> -->
   <!-- </div> -->
@@ -95,7 +95,7 @@
     </div>
   </section>
 
-  <section class="gradient4 a1" style="padding-top: 5em;">
+  <section class="gradient4" style="padding-top: 5em;">
     <div class="u-wrap">
       <center><button class="a3"><a href="/about" target="_blank">誠邀作者</a></button></center>
       <div class="discover column2">
@@ -112,7 +112,7 @@
               {{ end }}
             </div>
             <div>
-              <div class="a1" style="font-size: 1.5em;font-weight: bold;">
+              <div style="font-size: 1.5em;font-weight: bold;">
                 <a href="/author/{{ $name }}">{{ $name }}</a>
                 <sup class="tag-count"> {{ $count }}</sup>
                 <span class="des-base author-mail">{{ $icon.mail }}</span>
@@ -161,7 +161,7 @@
         {{ with $des := index (site.Data.taxo ) "琴藏" -}}{{- $des.des | safeHTML | markdownify -}}{{ end }}
       </p>
       <div class="discover-wrap">
-        <div class="discover a1">
+        <div class="discover">
           {{ range site.Taxonomies.toc.Alphabetical }}
           <div>
             <a href="{{ .Page.Permalink }}" target="_blank">{{- .Page.Title | safeHTML -}}</a>

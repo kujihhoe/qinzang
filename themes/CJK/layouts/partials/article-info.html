@@ -1,5 +1,5 @@
 <div class="article-info">
-    <div class="des-base a1">
+    <div class="des-base">
         <time datetime='{{ .Date.Format "2006-01-02" }}'>
             {{ .Date.Format "2006-01-02" }}
             {{ if ne .Date .Lastmod }}>{{- .Lastmod.Format "06-01-02" }}{{ end }}
@@ -9,7 +9,7 @@
         <!-- {{ partial "sourcecode.html" . }} -->
     </div>
     {{ $name := slice }}
-    <div class="des-base des-tag a1">
+    <div class="des-base des-tag">
         {{ with .Params.author }}
         <span><strong>作者</strong>
             {{ range . }}
@@ -134,7 +134,7 @@
             {{ end }}
     </div>
 
-    <div class="des-base des-tag a1">
+    <div class="des-base des-tag">
         <span><strong>版權</strong></span>
         {{ if eq .Page.Type "newsletter" }}
         版權歸原作者所有，請勿轉載
@@ -147,13 +147,13 @@
         {{ end }}
     </div>
     {{ if .Params.summary }}
-    <div class="des-base des-tag a1">
+    <div class="des-base des-tag">
         <span><strong>摘要</strong></span>
         {{ .Params.summary | safeHTML | markdownify }}
     </div>
     {{ end }}
     {{ if .Params.keywords }}
-    <div class="des-base des-tag a1">
+    <div class="des-base des-tag">
         <span><strong>關鍵詞</strong></span>
         {{ .Params.keywords }}
     </div>

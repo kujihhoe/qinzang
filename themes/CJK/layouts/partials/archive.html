@@ -10,7 +10,7 @@
     <div class="des-base">　凡 {{ $leng }} 篇　{{- $count6 }} 字　篇均 {{ div $count6 $leng }} 字</div>
   </div>
   <div class="discover-wrap">
-    <div class="discover a1">
+    <div class="discover">
       {{ range .Pages.ByDate.Reverse }}
       {{ if .Params.img }}
       <div class="discover-grid">

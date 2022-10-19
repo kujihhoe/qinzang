@@ -150,7 +150,7 @@ a {
   /* padding: .2em; */
 }
 
-a:after {
+article a:after {
   content: "⟲";
   color: var(--blue);
   font-family: var(--codesans);

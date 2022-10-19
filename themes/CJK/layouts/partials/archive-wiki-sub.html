@@ -4,7 +4,7 @@
 <h2 style="margin-bottom:0;" id="{{- .Page.Title | safeHTML -}}">{{ .Page.Title | safeHTML }}</h2>
 {{ if $length }}<div class="des-base">凡 {{ $length }} 篇　{{- $count4 }} 字　篇均 {{ div $count4 $length }} 字</div>{{ end }}
 {{ end }}
-<div class='discover a1 {{ if eq .Page.Title "律曆初階" }}column3{{ end }}'>
+<div class='discover {{ if eq .Page.Title "律曆初階" }}column3{{ end }}'>
   {{ range sort .Pages "File.Path" }}
   {{ if .Params.img }}
   <div class="discover-grid">

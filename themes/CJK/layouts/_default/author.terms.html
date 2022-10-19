@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main>
-  <section class="u-wrap a1">
+  <section class="u-wrap">
     <h1>可愛的作者</h1>
     <div class="discover column2">
       {{ range .Data.Terms.ByCount }}
@@ -16,7 +16,7 @@
             {{ end }}
           </div>
           <div>
-            <div class="a1" style="font-size: 1.5em;font-weight: bold;">
+            <div style="font-size: 1.5em;font-weight: bold;">
               <a href="/author/{{ $name }}">{{ $name }}</a>
               <sup class="tag-count"> {{ $count }}</sup>
               <span class="des-base author-mail">{{ $icon.mail }}</span>
