@@ -42,9 +42,6 @@ note = "note"
 tutokind = "tutokind"
 book = "book"
 
-[author] # essential
-name = "琴衡"
-
 [sitemap] # essential
 changefreq = "weekly"
 priority = 0.5
